@@ -4,17 +4,22 @@
     <meta charset="utf-8" >
 
 <title>关于 | GMQ&#39;s blog</title>
-<meta name="description" content="结庐在信竞，     
-而无大佬喧。">
+<meta name="description" content="结庐在信竞，而无大佬喧。">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://gaomaoqi.github.io/favicon.ico?v=1584456516079">
+<link rel="shortcut icon" href="https://gaomaoqi.github.io/favicon.ico?v=1584457031232">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://gaomaoqi.github.io/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
@@ -93,9 +98,9 @@
 <p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
 </blockquote>
 <h3 id="关于本站">🏠 关于本站</h3>
-<p>2020.3.17投入使用</p>
+<p>GMQ's blog ，2020.3.17投入使用</p>
 <h3 id="博主是谁">👨‍💻 博主是谁</h3>
-<p>一位OIer，坐标重庆，喜欢民航。</p>
+<p>一名OIer，坐标重庆，喜欢民航。</p>
 <h3 id="兴趣爱好">⛹ 兴趣爱好</h3>
 <p>敲代码与民航</p>
 <h3 id="联系我呀">📬 联系我呀</h3>
@@ -110,13 +115,20 @@ github：gaomaoqi</p>
           
         </div>
         
+          
+            <div class="paper" data-aos="fade-in">
+              <div id="gitalk-container"></div>
+            </div>
+          
+
+          
+        
       </div>
 
       <div class="sm-12 md-4 col sidebar">
   <div class="paper info-container">
-    <img src="https://gaomaoqi.github.io/images/avatar.png?v=1584456516079" class="no-responsive avatar">
-    <div class="text-muted">结庐在信竞，     
-而无大佬喧。</div>
+    <img src="https://gaomaoqi.github.io/images/avatar.png?v=1584457031232" class="no-responsive avatar">
+    <div class="text-muted">结庐在信竞，而无大佬喧。</div>
     <div class="social-container">
       
         
@@ -169,11 +181,11 @@ github：gaomaoqi</p>
     </div>
     <div class="row">
       
-        <a href="https://gaomaoqi.github.io/tag/x-F3EYggi/" class="badge secondary">
+        <a href="https://gaomaoqi.github.io/tag/x-F3EYggi/" class="badge warning">
           民航
         </a>
       
-        <a href="https://gaomaoqi.github.io/tag/Jpj6qhvfu/" class="badge ">
+        <a href="https://gaomaoqi.github.io/tag/Jpj6qhvfu/" class="badge success">
           Gridea
         </a>
       
@@ -196,6 +208,29 @@ AOS.init();
 hljs.initHighlightingOnLoad()
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'Bashu',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
