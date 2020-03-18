@@ -1,19 +1,14 @@
-
 <!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
+    <meta charset="utf-8" >
 
 <title>Hello,World!【食用必读】 | GMQ&#39;s blog</title>
-<meta name="description" content="结庐在信竞，而无大佬喧。">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://gaomaoqi.github.io/favicon.ico?v=1584525653603">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="https://gaomaoqi.github.io/favicon.ico?v=1584525937803">
 <link rel="stylesheet" href="https://gaomaoqi.github.io/styles/main.css">
 
 
@@ -24,78 +19,96 @@
   
 
 
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 
 
 
+    <meta name="description" content="在浏览本站前，请先务必阅读此篇文章或点击右上角“关于”阅读简单版。
+已经有名大佬踩了当前页面。。。
+关于我和我的博客
+这个博客主要涉及信息学题解、信息学学习笔记以及民航等方面。
+不定时更新，有灵感就更新。
+另外，我是C++党，所以你所见到的..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://gaomaoqi.github.io">
-        <img class="avatar" src="https://gaomaoqi.github.io/images/avatar.png?v=1584525653603" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://gaomaoqi.github.io">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://gaomaoqi.github.io">
+        <img src="https://gaomaoqi.github.io/images/avatar.png?v=1584525937803" class="site-logo">
         <h1 class="site-title">GMQ&#39;s blog</h1>
       </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
     </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
-  </div>
-</div>
-
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
+    <div>
       
         
-          <a href="/" class="menu purple-link">
+          <a href="/" class="site-nav">
             首页
           </a>
         
       
         
-          <a href="/archives" class="menu purple-link">
+          <a href="/archives" class="site-nav">
             归档
           </a>
         
       
         
-          <a href="/tags" class="menu purple-link">
+          <a href="/tags" class="site-nav">
             标签
           </a>
         
       
         
-          <a href="/post/about" class="menu purple-link">
+          <a href="/post/about" class="site-nav">
             关于
           </a>
         
       
     </div>
   </div>
-</transition>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      结庐在信竞，而无大佬喧。
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://gaomaoqi.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
 
 
-      <div class="content-container">
-        <div class="post-detail">
-          
-            <div class="feature-container" style="background-image: url('https://cdn.pixabay.com/photo/2016/04/16/13/43/hello-world-1333103_960_720.jpg')">
-            </div>
-          
-          <h2 class="post-title">Hello,World!【食用必读】</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2020-03-17</span>
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Hello,World!【食用必读】</h2>
+            <div class="post-date">2020-03-17</div>
             
-          </div>
-          <div class="post-content">
-            <p><strong>在浏览本站前，请先务必阅读此篇文章或点击右上角“关于”阅读简单版。</strong><br>
+              <div class="feature-container" style="background-image: url('https://cdn.pixabay.com/photo/2016/04/16/13/43/hello-world-1333103_960_720.jpg')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p><strong>在浏览本站前，请先务必阅读此篇文章或点击右上角“关于”阅读简单版。</strong><br>
 已经有<img src="https://www.hit-counts.com/counter.php?t=MTQ0NjYyMw==%27%20border=%270%27%20alt=%27logo%20services" alt="" loading="lazy">名大佬踩了当前页面。。。</p>
 <h2 id="关于我和我的博客">关于我和我的博客</h2>
 <p>这个博客主要涉及信息学题解、信息学学习笔记以及民航等方面。<br>
@@ -109,51 +122,37 @@
 <a href="https://www.luogu.com.cn/user/234930">gaobeifan2022的luogu主页</a><br>
 <a href="https://www.luogu.com.cn/user/313821">continue的luogu主页</a></p>
 
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://gaomaoqi.github.io/post/fei-ji-ni-gan-mou-liao-me/">
+                  <h3 class="post-title">
+                    飞机，你感冒了么？
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
           </div>
+
         </div>
-
-        
-          <div class="next-post">
-            <a class="purple-link" href="https://gaomaoqi.github.io/post/fei-ji-ni-gan-mou-liao-me/">
-              <h3 class="post-title">
-                下一篇：飞机，你感冒了么？
-              </h3>
-            </a>
-          </div>
-          
       </div>
-
-      
-        
-          <div id="gitalk-container"></div>
-        
-
-        
-      
-
-      <div class="site-footer">
-  <div class="slogan">结庐在信竞，而无大佬喧。</div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://gaomaoqi.github.io/atom.xml" target="_blank">RSS</a>
-</div>
-
-
     </div>
-    <script type="application/javascript">
 
-hljs.initHighlightingOnLoad()
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
 
 var app = new Vue({
   el: '#app',
@@ -163,6 +162,8 @@ var app = new Vue({
 })
 
 </script>
+
+
 
 
 
