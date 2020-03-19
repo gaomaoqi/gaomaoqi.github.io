@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaomaoqi.github.io</id>
     <title>GMQ&apos;s blog</title>
-    <updated>2020-03-19T09:55:36.835Z</updated>
+    <updated>2020-03-19T10:28:17.351Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaomaoqi.github.io"/>
     <link rel="self" href="https://gaomaoqi.github.io/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>https://gaomaoqi.github.io/images/avatar.png</logo>
     <icon>https://gaomaoqi.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, GMQ&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[大事记]]></title>
+        <id>https://gaomaoqi.github.io/post/da-shi-ji/</id>
+        <link href="https://gaomaoqi.github.io/post/da-shi-ji/">
+        </link>
+        <updated>2020-03-19T10:08:49.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="2020319">2020.3.19</h1>
+<ul>
+<li>评论功能上线</li>
+<li>搜索功能上线</li>
+</ul>
+<h1 id="2020318">2020.3.18</h1>
+<ul>
+<li>更新主题。</li>
+</ul>
+<h1 id="2020317">2020.3.17</h1>
+<ul>
+<li>搭建完成，开始运行。</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【关于】 Hello,World!（食用必读）]]></title>
         <id>https://gaomaoqi.github.io/post/helloworld/</id>
@@ -31,7 +52,7 @@ github：gaomaoqi</p>
 <h2 id="大事记">大事记</h2>
 <p><strong>2020.3.17</strong>，搭建完成，开始运行。<br>
 <strong>2020.3.18</strong>，更新主题。<br>
-<strong>2020.3.19</strong>，新增搜索功能。</p>
+<strong>2020.3.19</strong>，评论、搜索功能上线。</p>
 <h2 id="my-friends">My friends</h2>
 <p><a href="https://www.luogu.com.cn/user/233809">yuzhenghao的luogu主页</a><br>
 <a href="https://yuzhenghao.cn/">yuzhenghao's blog</a><br>
