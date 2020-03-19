@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaomaoqi.github.io</id>
     <title>GMQ&apos;s blog</title>
-    <updated>2020-03-19T09:10:34.665Z</updated>
+    <updated>2020-03-19T09:15:09.261Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaomaoqi.github.io"/>
     <link rel="self" href="https://gaomaoqi.github.io/atom.xml"/>
@@ -29,7 +29,9 @@ github：gaomaoqi</p>
 不定时更新，有灵感就更新。<br>
 另外，我是C++党，所以你所见到的代码几乎都是C++的，略懂Python，<s>以及精通Scratch</s>。</p>
 <h2 id="大事记">大事记</h2>
-<p><strong>2020.3.17</strong>，搭建完成，开始运行。</p>
+<p><strong>2020.3.17</strong>，搭建完成，开始运行。<br>
+<strong>2020.3.18</strong>，更新主题。<br>
+<strong>2020.3.19</strong>，新增搜索功能。</p>
 <h2 id="my-friends">My friends</h2>
 <p><a href="https://www.luogu.com.cn/user/233809">yuzhenghao的luogu主页</a><br>
 <a href="https://yuzhenghao.cn/">yuzhenghao's blog</a><br>
