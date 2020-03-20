@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaomaoqi.github.io</id>
     <title>GMQ&apos;s blog</title>
-    <updated>2020-03-20T12:41:23.915Z</updated>
+    <updated>2020-03-20T12:44:19.461Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaomaoqi.github.io"/>
     <link rel="self" href="https://gaomaoqi.github.io/atom.xml"/>
@@ -35,7 +35,11 @@
         <link href="https://gaomaoqi.github.io/post/da-shi-ji/">
         </link>
         <updated>2020-03-19T10:08:49.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="2020319">2020.3.19</h1>
+        <summary type="html"><![CDATA[<p><strong>这个博客创建以来的更新</strong></p>
+]]></summary>
+        <content type="html"><![CDATA[<p><strong>这个博客创建以来的更新</strong></p>
+<!-- more -->
+<h1 id="2020319">2020.3.19</h1>
 <ul>
 <li>评论功能上线</li>
 <li>搜索功能上线</li>
@@ -88,8 +92,12 @@ github：gaomaoqi</p>
         <link href="https://gaomaoqi.github.io/post/fei-ji-ni-gan-mou-liao-me/">
         </link>
         <updated>2020-03-17T14:30:44.000Z</updated>
+        <summary type="html"><![CDATA[<p>人有时会感冒，感冒之后人们一般戴上口罩。这样呼吸的空气是热的，能舒服一些。</p>
+<p>可是，有些飞机也戴着口罩，难道它是感冒了么？</p>
+]]></summary>
         <content type="html"><![CDATA[<p>人有时会感冒，感冒之后人们一般戴上口罩。这样呼吸的空气是热的，能舒服一些。</p>
 <p>可是，有些飞机也戴着口罩，难道它是感冒了么？</p>
+<!-- more -->
 <figure data-type="image" tabindex="1"><img src="https://s2.ax1x.com/2020/03/04/3oe0De.png" alt="3oe0De.png" loading="lazy"></figure>
 <p>飞机是铁疙瘩，当然没有感冒这回事。飞机戴的“口罩”是雷达罩，确切地说，是雷达的“整流罩”。</p>
 <p>所谓“整流罩”，作用就是“整理气流”。它是个“壳壳”，里头没有东西。</p>
