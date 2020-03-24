@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaomaoqi.github.io</id>
     <title>GMQ&apos;s blog</title>
-    <updated>2020-03-24T03:12:36.496Z</updated>
+    <updated>2020-03-24T03:14:39.754Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaomaoqi.github.io"/>
     <link rel="self" href="https://gaomaoqi.github.io/atom.xml"/>
@@ -16,7 +16,10 @@
         <link href="https://gaomaoqi.github.io/post/tu-lun-suan-fa-tuo-bu-pai-xu/">
         </link>
         <updated>2020-03-24T03:01:06.000Z</updated>
+        <summary type="html"><![CDATA[<p><strong>GMQ出品，拓扑排序的概念、堆优化、基础例题及代码详解</strong></p>
+]]></summary>
         <content type="html"><![CDATA[<p><strong>GMQ出品，拓扑排序的概念、堆优化、基础例题及代码详解</strong></p>
+<!-- more -->
 <h4 id="一-什么是拓扑排序">一、什么是拓扑排序</h4>
 <p>在图论中，<strong>拓扑排序</strong>（Topological Sorting）是一个<strong>有向无环图</strong>（DAG, Directed Acyclic Graph）的<strong>所有顶点</strong>的<strong>线性序列</strong>。且该序列必须满足下面两个条件：</p>
 <ul>
