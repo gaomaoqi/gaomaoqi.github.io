@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Hello Gridea | GMQ&#39;s blog</title>
+<title>【图论算法】拓扑排序 | GMQ&#39;s blog</title>
 <meta name="description" content="结庐在信竞，而无大佬喧。" />
 <link rel="shortcut icon" href="https://gaomaoqi.github.io/favicon.ico">
 <link rel="stylesheet" href="https://gaomaoqi.github.io/styles/main.css">
@@ -15,14 +15,10 @@
 <script src="https://gaomaoqi.github.io/media/js/jquery.magnific-popup.min.js"></script>
 <script src="https://gaomaoqi.github.io/media/js/functions.js"></script>
     <meta name="referrer" content="never">
-    <meta name="description" content="👏  欢迎使用 Gridea ！
-✍️  Gridea 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意...
-Github
-Gridea 主页
-示例网站
-特性👇
-📝  你可以使用最酷的 Markdown 语法..." />
-    <meta name="keywords" content="Gridea" />
+    <meta name="description" content="GMQ出品，拓扑排序的概念、堆优化、基础例题及代码详解
+一、什么是拓扑排序
+在图论中，拓扑排序（Topological Sorting）是一个有向无环图（DAG, Directed Acyclic Graph）的所有顶点的线性序列。且该序列..." />
+    <meta name="keywords" content="信息学" />
     <script src="https://gaomaoqi.github.io/media/js/waterfall.min.js"></script>
     <script src="https://gaomaoqi.github.io/media/js/prism.min.js"></script>
   </head>
@@ -102,23 +98,23 @@ Gridea 主页
       <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
 
         <div class="center content">
-          <div class="featured-image cover" style="background-image: url('https://gaomaoqi.github.io/post-images/hello-gridea.png');">
+          <div class="featured-image cover" style="background-image: url('https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3578965674,3079548089&amp;fm=26&amp;gp=0.jpg');">
             <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="2020-03-17"><i class="fa fa-calendar"></i><span class="lately">7 天前</span></time>
+              <time class="meta-info" style="float:left;" datetime="2020-03-24"><i class="fa fa-calendar"></i><span class="lately">11 分钟前</span></time>
               
-              <a href="https://gaomaoqi.github.io/post/hello-gridea/#comments" class="comments meta-info" title="">
-                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/hello-gridea/"> </span>
+              <a href="https://gaomaoqi.github.io/post/tu-lun-suan-fa-tuo-bu-pai-xu/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/tu-lun-suan-fa-tuo-bu-pai-xu/"> </span>
               </a>
-              <span id="/hello-gridea/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              <span id="/tu-lun-suan-fa-tuo-bu-pai-xu/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
               
             </div>
             <div class="info">
               <div class="tags ">
                 
-                      <a href="https://gaomaoqi.github.io/tag/Jpj6qhvfu/" class="ctag ctag-0 ctag-Jpj6qhvfu" aria-label="">Gridea</a>
+                      <a href="https://gaomaoqi.github.io/tag/RD-jMNR6j/" class="ctag ctag-0 ctag-RD-jMNR6j" aria-label="">信息学</a>
                     
               </div>
-              <h1 class="title ularge white bold">Hello Gridea</h1>
+              <h1 class="title ularge white bold">【图论算法】拓扑排序</h1>
             </div>
           </div>
         </div>  
@@ -128,26 +124,293 @@ Gridea 主页
             <article class="main-article post">
               <section class="post-content">
                 <div class="text">
-                  <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意...</p>
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+                  <p><strong>GMQ出品，拓扑排序的概念、堆优化、基础例题及代码详解</strong></p>
+<h4 id="一-什么是拓扑排序">一、什么是拓扑排序</h4>
+<p>在图论中，<strong>拓扑排序</strong>（Topological Sorting）是一个<strong>有向无环图</strong>（DAG, Directed Acyclic Graph）的<strong>所有顶点</strong>的<strong>线性序列</strong>。且该序列必须满足下面两个条件：</p>
+<ul>
+<li>每个顶点<strong>出现且只出现一次</strong>。</li>
+<li>若<strong>存在</strong>一条<strong>从顶点A到顶点B的路径</strong>，那么在序列中<strong>顶点A出现在顶点B的前面</strong>。</li>
+</ul>
+<p>有向无环图（DAG）才有拓扑排序，非DAG图没有拓扑排序一说。</p>
+<p>例如，下面这个图：</p>
+<figure data-type="image" tabindex="1"><img src="https://upload-images.jianshu.io/upload_images/3076982-bee44a555fc11686.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/335/format/webp" alt="来自网络" loading="lazy"></figure>
+<p>对于本图而言:它是一个DAG图，那么如何写出它的拓扑排序呢？</p>
+<p>一种比较常用的方法：</p>
+<ol>
+<li>
+<p>从DAG图中选择一个没有前驱（即入度为0）的顶点并输出。</p>
+</li>
+<li>
+<p>从图中删除该顶点和所有以它为起点的有向边。</p>
+</li>
+<li>
+<p>重复1和2直到当前的DAG<strong>图为空</strong>或<strong>当前图中不存在无前驱的顶点为止</strong>。后一种情况说明有向图中必然存在环。</p>
+</li>
+</ol>
+<p>经过如下操作后：</p>
+<figure data-type="image" tabindex="2"><img src="https://upload-images.jianshu.io/upload_images/3076982-7fc27abb0260909e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/544/format/webp" alt="来自网络" loading="lazy"></figure>
+<p>得到拓扑排序后的结果是{1,2, 4, 3, 5}。<br>
+通常，一个有向无环图可以有<strong>一个或多个</strong>拓扑排序序列。</p>
+<hr>
+<p>再来一个例子：</p>
+<figure data-type="image" tabindex="3"><img src="https://bkimg.cdn.bcebos.com/pic/9345d688d43f87940e886390da1b0ef41bd53a1c?x-bce-process=image/watermark,g_7,image_d2F0ZXIvYmFpa2U5Mg==,xp_5,yp_5" alt="来自百度百科" loading="lazy"></figure>
+<hr>
+<h4 id="二-例题">二、例题</h4>
+<h5 id="模板题1462-拓扑排序拓扑排序">模板题：1462 -- 【拓扑排序】拓扑排序</h5>
+<pre><code>[问题描述]
+给你一个图，要求你求出拓扑序列。
+
+[输入格式]
+第1行为2个空格分开的整数n(2&lt;=n&lt;=200)和m(10&lt;=m&lt;=20000)，分别表示图的顶点数和边数。
+第2...m+1行，每行2个空格分开的整数i, j, i表示一条边的起点，j表示终点。
+
+[输出格式]
+拓扑序，顶点从1开始编号，若有多个拓扑序，则顶点编号小的优先输出。
+若有环，则输出&quot;no solution&quot;。
+
+[样例输入]
+22
+12
+21
+
+[样例输出]
+no solution
+</code></pre>
+<p>代码如下（按照最小字典序输出）复杂度为O(N<sup>2</sup>)：</p>
+<pre><code class="language-c++">#include&lt;iostream&gt;
+#include&lt;cstdio&gt;
+#include&lt;cstring&gt;
+using namespace std;
+int n,m;
+int rd[410],ans[410];
+bool mapp[410][410];
+int tp() {
+	for(int i=1; i&lt;=n; i++) {
+		int k;
+		for(k=1; k&lt;=n+1; k++) {//寻找入度为0的点
+			if(rd[k]==0) {
+				break;
+			}
+		}
+		if(k&gt;n) return 0;//环!
+		ans[++ans[0]]=k;//按照最小字典序记录拓扑序列
+		rd[k]=-1;//标记入度为-1（注：千万不能标记为0）
+		for(int j=1; j&lt;=n; j++) {
+			if(mapp[k][j]==1) rd[j]--;//删除连边
+		}
+	}
+	return 1;
+}
+int main() {
+	cin&gt;&gt;n&gt;&gt;m;
+	for(int i=1; i&lt;=m; i++) {
+		int x,y;
+		cin&gt;&gt;x&gt;&gt;y;
+		rd[y]++;//统计入度
+		mapp[x][y]=1;//邻接矩阵存储
+	}
+	if(tp()) {//无环
+		for(int i=1; i&lt;=ans[0]; i++) {
+			cout&lt;&lt;ans[i]&lt;&lt;&quot; &quot;;
+		}
+		return 0;
+	}
+	cout&lt;&lt;&quot;no solution&quot;&lt;&lt;endl;//有环
+	return 0;
+}
+</code></pre>
+<hr>
+<h5 id="变形题1464-拓扑排序被遗忘的时光">变形题：1464 -- 【拓扑排序】被遗忘的时光</h5>
+<pre><code>[问题描述]
+Lost-Monkey赢了精灵，精灵告诉Lost-Monkey，神庙里被恶魔封印了一个名为Lostangle的天使，如果想把它释放出来，需要将 n 个时间点排序，而精灵只知道 m 条形如 a 在 b 前的信息。
+Lost-Monkey一听到有天使，很想见见天使到底长什么样，可惜时间点太多，他觉得这几乎是不可能的任务，好在身为在他旁边的XXX，你，传说中的impossible is nothing，一定知道如何解决啦！！
+
+[输入格式]
+第一行n，m；
+接下来m行，每行2个数a，b；意义均同上。
+
+[输出格式]
+输出文件仅一行，若可以将n个时间点排序，则输出字典序最小的一种方案，否则输出“NO SOLUTION”。
+
+[样例输入]
+3 2
+1 2
+2 3
+
+[样例输出]
+1 2 3
+
+[数据范围]
+40%的数据,n&lt;=1000，m&lt;=1000
+100%的数据,n&lt;=100000，m&lt;=500000
+</code></pre>
+<p>这道题结点数n&lt;=100000</p>
+<p>若为了保证字典序最小，按照上一道题的邻接矩阵实现方法时间复杂度为O(N<sup>2</sup>)，必然TLE</p>
+<p>可以改进入度为0的点的汇总方式，不跑循环，而是在断边时判断并存储</p>
+<p>但如果只用数组存储，虽然复杂度降到了O(n+e)，但是不能按照字典序</p>
+<p>这是因为取出入度为0的点时是直接取数组头（否则也得不到优化复杂度的目的），而数组头不一定字典序最小</p>
+<p>而什么容器可以维护字典序呢？</p>
+<p>我听见你在说：“<s>set！</s> 优先队列！！！”</p>
+<p>这是因为：</p>
+<blockquote>
+<p>较之于队列，优先队列的不同在于它<strong>每一次取值取的是队列中的最大（小）值</strong></p>
+</blockquote>
+<p>那么，我们可以用小根堆维护一个优先队列（<s>STL万岁</s>！）</p>
+<p>这样可以在O(1)的复杂度内找到字典序最小的入度为0的点</p>
+<p>代码如下（按照最小字典序输出）复杂度为O(n+e)：</p>
+<pre><code class="language-c++">#include&lt;iostream&gt;
+#include&lt;cstdio&gt;
+#include&lt;cstring&gt;
+#include&lt;queue&gt;
+#define maxn 500010
+using namespace std;
+priority_queue&lt;int,vector&lt;int&gt;,greater&lt;int&gt; &gt;hp;//STL小根堆
+int n,m;
+int rd[maxn],ans[maxn];
+struct star{
+	int next,to;
+}a[maxn];
+int h[maxn],top;
+void add(int x,int y) {
+	a[++top].to=y;
+	a[top].next=h[x];
+	h[x]=top;
+    return;
+}
+int tp() {
+	for(int i=1; i&lt;=n; i++) {
+		if(rd[i]==0) hp.push(i);//入堆
+	}
+	while(!hp.empty()) {//堆非空
+		int x=hp.top();
+		hp.pop();//取出堆顶
+		ans[++ans[0]]=x;
+		for(int i=h[x]; i; i=a[i].next) {
+			int y=a[i].to;
+			rd[y]--;
+			if(rd[y]==0) hp.push(y);//入度为0的点入堆
+		}
+	}
+	if(ans[0]!=n) return 0;//有入度为0的点未取出，即有环
+	return 1;
+}
+int main() {
+	cin&gt;&gt;n&gt;&gt;m;
+	for(int i=1; i&lt;=m; i++) {
+		int x,y;
+		cin&gt;&gt;x&gt;&gt;y;
+		add(x,y);//前向星存储
+		rd[y]++;//统计入度
+	}
+	if(tp()) {//无环
+		for(int i=1; i&lt;=ans[0]; i++) {
+			cout&lt;&lt;ans[i]&lt;&lt;&quot; &quot;;
+		}
+		return 0;
+	}
+	cout&lt;&lt;&quot;NO SOLUTION&quot;&lt;&lt;endl;//有环
+	return 0;
+}
+</code></pre>
+<hr>
+<h5 id="变形题1465-拓扑排序奖金">变形题：1465 -- 【拓扑排序】奖金</h5>
+<pre><code>[问题描述]
+由于无敌的凡凡在2005年世界英俊帅气男总决选中胜出，Yali Company总经理Mr.Z心情好，决定给每位员工发奖金。公司决定以每个人本年在公司的贡献为标准来计算他们得到奖金的多少。
+于是Mr.Z下令召开m方会谈。每位参加会谈的代表提出了自己的意见：“我认为员工a的奖金应该比b高！”Mr.Z决定要找出一种奖金方案，满足各位代表的意见，且同时使得总奖金数最少。每位员工奖金最少为100元。
+　　
+[文件输入]
+第一行两个整数n,m，表示员工总数和代表数；
+以下m行，每行2个整数a,b，表示某个代表认为第a号员工奖金应该比第b号员工高。v
+
+[文件输出]
+若无法找到合理方案，则输出“Poor Xed”；否则输出一个数表示最少总奖金。
+
+[样例输入]
+2 1
+1 2
+
+[样例输出]
+201
+
+[数据规模]
+80％的数据满足n&lt;=1000，m&lt;=2000；
+100％的数据满足n&lt;=10000，m&lt;=20000。
+</code></pre>
+<p>首先构图，若存在条件&quot;a的钱比b多&quot;则从b引-条有向指向a；然后拓扑排序，若无法完成排序则表示问题无解(存在圈)；若可以得到完整的拓扑序列，则按序列顺序进行递推：</p>
+<p>设 f[i] 表示第i个人能拿的最少奖金数；</p>
+<p>首先所有f[i] =100(题目中给定的最小值)；</p>
+<p>然后按照拓扑顺序考察每个点i，若存在有向边(j,i),则表示们必须比f[j]大，因此我们令f[i] = Max { f[i]，fj]+1 }即可；</p>
+<p>递推完成之后所有f[i]的值也就确定了，而答案就等于f[1]+... +f[n]。</p>
+<p>代码如下（按照最小字典序输出）复杂度为O(n*e)：</p>
+<pre><code class="language-c++">#include&lt;iostream&gt;
+#include&lt;cstdio&gt;
+#include&lt;cstring&gt;
+#include&lt;queue&gt;
+#define maxn 500010
+using namespace std;
+priority_queue&lt;int,vector&lt;int&gt;,greater&lt;int&gt; &gt;hp;//STL小根堆
+int n,m;
+int rd[maxn],ans[maxn];
+struct star{
+	int next,to;
+}a[maxn];
+int h[maxn],top;
+void add(int x,int y) {
+	a[++top].to=y;
+	a[top].next=h[x];
+	h[x]=top;
+    return;
+}
+int tp() {
+	for(int i=1; i&lt;=n; i++) {
+		if(rd[i]==0) hp.push(i);//入堆
+	}
+	int topp=0;
+	while(!hp.empty()) {//堆非空
+		int x=hp.top();
+		hp.pop();//取出堆顶
+		topp++;
+		for(int i=h[x]; i; i=a[i].next) {
+			int y=a[i].to;
+			rd[y]--;
+			ans[y]=max(ans[y],ans[x]+1);
+			if(rd[y]==0) {
+				hp.push(y);//入度为0的点入堆
+			}
+		}
+	}
+	if(topp!=n) return 0;//有入度为0的点未取出，即有环
+	return 1;
+}
+int main() {
+	cin&gt;&gt;n&gt;&gt;m;
+    for(int i=1; i&lt;=n; i++) {
+        ans[i]=100;
+	}
+	for(int i=1; i&lt;=m; i++) {
+		int x,y;
+		cin&gt;&gt;x&gt;&gt;y;
+		add(y,x);//前向星存储
+		rd[x]++;//统计入度
+	}
+	if(tp()) {//无环
+		int sum=0;
+		for(int i=1; i&lt;=n; i++) {
+			sum+=ans[i];
+		}
+		cout&lt;&lt;sum;
+		return 0;
+	}
+	cout&lt;&lt;&quot;Poor Xed&quot;&lt;&lt;endl;//有环
+	return 0;
+}
+</code></pre>
+<p>拓扑排序概念内容引自简书<br>
+图片来源：简书、百度百科<br>
+题目来源：Did及Xinyue<br>
+代码：GMQ原创出品<br>
+代码与堆优化详解：GMQ原创出品<br>
+有转载需求请私信：gao.maoqi.2007@foxmail.com</p>
 
                 </div>
                 <div class="clear"></div>
@@ -157,19 +420,19 @@ Gridea 主页
 
             <section class="related section">
               
-              <article class="prev grid-50 tablet-grid-50 grid-parent">
-                <div class="thumb cover lazy loaded" style="background-image: url('http://img6.hangkong.com/1807-99.jpg?0');"></div>
-                 <a href="https://gaomaoqi.github.io/post/fei-ji-ni-gan-mou-liao-me/" class="full-link"></a>
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1655715512,88546096&amp;fm=26&amp;gp=0.jpg');"></div>
+                 <a href="https://gaomaoqi.github.io/post/kong-ke-a320/" class="full-link"></a>
                  <div class="info">
-                  <time datetime="2020-03-17">2020-03-17</time>
-                  <h4 class="title white no-margin">飞机，你感冒了么？</h4>
+                  <time datetime="2020-03-21">2020-03-21</time>
+                  <h4 class="title white no-margin">空客A320</h4>
                 </div>
                  <span class="epcl-button red">
-                  <img src="https://gaomaoqi.github.io/media/images/left-arrow.svg" width="15" alt="Left Arrow">
+                  <img src="https://gaomaoqi.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">
                 </span>
                 <div class="overlay"></div>
               </article>
-              
               
 
                 <div class="clear"></div>
