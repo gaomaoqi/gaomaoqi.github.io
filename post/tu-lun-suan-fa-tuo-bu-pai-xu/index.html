@@ -86,7 +86,7 @@
       <div class="hide-on-mobile hide-on-tablet hide-on-desktop">
         <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
           <div class="search-wrapper section">
-            <form id="gridea-search-form" data-update="1585047557734" action="/search/index.html" class="search-form" _lpchecked="1">
+            <form id="gridea-search-form" data-update="1585047972111" action="/search/index.html" class="search-form" _lpchecked="1">
               <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..." required="">
               <button type="submit" class="submit" aria-label="Submit">
                 <i class="fa fa-search-line"></i>
@@ -343,7 +343,7 @@ int main() {
 <p>首先构图，若存在条件&quot;a的钱比b多&quot;则从b引-条有向指向a；然后拓扑排序，若无法完成排序则表示问题无解(存在圈)；若可以得到完整的拓扑序列，则按序列顺序进行递推：</p>
 <p>设 f[i] 表示第i个人能拿的最少奖金数；</p>
 <p>首先所有f[i] =100(题目中给定的最小值)；</p>
-<p>然后按照拓扑顺序考察每个点i，若存在有向边(j,i),则表示们必须比f[j]大，因此我们令f[i] = Max { f[i]，fj]+1 }即可；</p>
+<p>然后按照拓扑顺序考察每个点i，若存在有向边(j,i),则表示们必须比f[j]大，因此我们令f[i] = Max { f[i]，f[j]+1 }即可；</p>
 <p>递推完成之后所有f[i]的值也就确定了，而答案就等于f[1]+... +f[n]。</p>
 <p>代码如下（按照最小字典序输出）复杂度为O(n*e)：</p>
 <pre><code class="language-c++">#include&lt;iostream&gt;
