@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaomaoqi.github.io</id>
     <title>GMQ&apos;s blog</title>
-    <updated>2020-03-24T03:24:42.307Z</updated>
+    <updated>2020-03-24T05:11:09.047Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaomaoqi.github.io"/>
     <link rel="self" href="https://gaomaoqi.github.io/atom.xml"/>
@@ -20,7 +20,7 @@
 ]]></summary>
         <content type="html"><![CDATA[<p><strong>GMQ出品，拓扑排序的概念、堆优化、基础例题及代码详解</strong></p>
 <!-- more -->
-<h4 id="一-什么是拓扑排序">一、什么是拓扑排序</h4>
+<h1 id="一-什么是拓扑排序">一、什么是拓扑排序</h1>
 <p>在图论中，<strong>拓扑排序</strong>（Topological Sorting）是一个<strong>有向无环图</strong>（DAG, Directed Acyclic Graph）的<strong>所有顶点</strong>的<strong>线性序列</strong>。且该序列必须满足下面两个条件：</p>
 <ul>
 <li>每个顶点<strong>出现且只出现一次</strong>。</li>
@@ -50,8 +50,8 @@
 <p>再来一个例子：</p>
 <figure data-type="image" tabindex="3"><img src="https://bkimg.cdn.bcebos.com/pic/9345d688d43f87940e886390da1b0ef41bd53a1c?x-bce-process=image/watermark,g_7,image_d2F0ZXIvYmFpa2U5Mg==,xp_5,yp_5" alt="来自百度百科" loading="lazy"></figure>
 <hr>
-<h4 id="二-例题">二、例题</h4>
-<h5 id="模板题1462-拓扑排序拓扑排序">模板题：1462 -- 【拓扑排序】拓扑排序</h5>
+<h1 id="二-例题">二、例题</h1>
+<h2 id="模板题1462-拓扑排序拓扑排序">模板题：1462 -- 【拓扑排序】拓扑排序</h2>
 <pre><code>[问题描述]
 给你一个图，要求你求出拓扑序列。
 
@@ -115,7 +115,7 @@ int main() {
 }
 </code></pre>
 <hr>
-<h5 id="变形题1464-拓扑排序被遗忘的时光">变形题：1464 -- 【拓扑排序】被遗忘的时光</h5>
+<h2 id="变形题1464-拓扑排序被遗忘的时光">变形题：1464 -- 【拓扑排序】被遗忘的时光</h2>
 <pre><code>[问题描述]
 Lost-Monkey赢了精灵，精灵告诉Lost-Monkey，神庙里被恶魔封印了一个名为Lostangle的天使，如果想把它释放出来，需要将 n 个时间点排序，而精灵只知道 m 条形如 a 在 b 前的信息。
 Lost-Monkey一听到有天使，很想见见天使到底长什么样，可惜时间点太多，他觉得这几乎是不可能的任务，好在身为在他旁边的XXX，你，传说中的impossible is nothing，一定知道如何解决啦！！
@@ -208,7 +208,7 @@ int main() {
 }
 </code></pre>
 <hr>
-<h5 id="变形题1465-拓扑排序奖金">变形题：1465 -- 【拓扑排序】奖金</h5>
+<h2 id="变形题1465-拓扑排序奖金">变形题：1465 -- 【拓扑排序】奖金</h2>
 <pre><code>[问题描述]
 由于无敌的凡凡在2005年世界英俊帅气男总决选中胜出，Yali Company总经理Mr.Z心情好，决定给每位员工发奖金。公司决定以每个人本年在公司的贡献为标准来计算他们得到奖金的多少。
 于是Mr.Z下令召开m方会谈。每位参加会谈的代表提出了自己的意见：“我认为员工a的奖金应该比b高！”Mr.Z决定要找出一种奖金方案，满足各位代表的意见，且同时使得总奖金数最少。每位员工奖金最少为100元。
