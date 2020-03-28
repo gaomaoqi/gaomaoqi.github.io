@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaomaoqi.github.io</id>
     <title>GMQ&apos;s blog</title>
-    <updated>2020-03-26T05:14:39.613Z</updated>
+    <updated>2020-03-28T03:03:13.710Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaomaoqi.github.io"/>
     <link rel="self" href="https://gaomaoqi.github.io/atom.xml"/>
@@ -336,7 +336,7 @@ int main() {
 <img src="http://img6.hangkong.com/144918-99.jpg?0" alt="" loading="lazy"></li>
 <li>香港快运航空<br>
 <img src="http://img6.hangkong.com/49973-99.jpg?0" alt="" loading="lazy"></li>
-<li><s>星宇航空</s> &lt;--出于政治问题被删除</li>
+<li>中华人民共和国星宇航空</li>
 <li>靛蓝航空<br>
 <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3488004703,3868647362&amp;fm=26&amp;gp=0.jpg" alt="" loading="lazy"></li>
 <li>达美航空<br>
