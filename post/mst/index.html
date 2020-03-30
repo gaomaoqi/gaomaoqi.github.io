@@ -1,0 +1,825 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>【图论算法】最小生成树（MST） | GMQ&#39;s blog</title>
+<meta name="description" content="结庐在信竞，而无大佬喧。" />
+<link rel="shortcut icon" href="https://gaomaoqi.github.io/favicon.ico">
+<link rel="stylesheet" href="https://gaomaoqi.github.io/styles/main.css">
+
+<script src="https://gaomaoqi.github.io/media/js/jquery.min.js"></script>
+<script src="https://gaomaoqi.github.io/media/js/masonry.pkgd.min.js"></script>
+<script src="https://gaomaoqi.github.io/media/js/aos.js"></script>
+<script src="https://gaomaoqi.github.io/media/js/pace.min.js"></script>
+<script src="https://gaomaoqi.github.io/media/js/view-image.min.js"></script>
+<script src="https://gaomaoqi.github.io/media/js/jquery.magnific-popup.min.js"></script>
+<script src="https://gaomaoqi.github.io/media/js/functions.js"></script>
+    <meta name="referrer" content="never">
+    <meta name="description" content="GMQ出品，最小生成树（MST）概念、算法、基础例题及代码详解
+
+一、生成树的定义
+生成树：一个|V|个点的无向连通图中，取其中|V|-1条边，并连接所有的顶点，则为原图的一棵生成树。
+树的属性：树是图的一种特殊形态。一个图G是树当且仅当以..." />
+    <meta name="keywords" content="" />
+    <script src="https://gaomaoqi.github.io/media/js/waterfall.min.js"></script>
+    <script src="https://gaomaoqi.github.io/media/js/prism.min.js"></script>
+  </head>
+  <body>
+            <header id="header" class="grid-container">
+        <!-- start: .menu-wrapper -->
+        <div class="menu-mobile"> 
+          <i class="fa fa-reorder"></i>
+        </div>
+        <div class="menu-wrapper">
+          <div class="">
+            <div class="logo">
+              <a href="https://gaomaoqi.github.io"><img src="\media\images\custom-headerLogo.jpg" alt=""></a>
+            </div>
+            <!-- start: .main-nav -->
+
+            <nav class="main-nav grid-container grid-parent">
+              <ul id="menu-header" class="menu gradient-effect">
+                <li class=""><a href="https://gaomaoqi.github.io" class="menu">首页</a></li>
+                
+                  <li class="" >
+                    <a href="/archives" class="menu">
+                      归档
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="/tags" class="menu">
+                      标签
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="/post/helloworld/" class="menu">
+                      关于
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="/post/da-shi-ji/" class="menu">
+                      大事记
+                    </a>
+                  </li>
+                
+                  <li class="" >
+                    <a href="/post/peng-you-men/" class="menu">
+                      朋友们
+                    </a>
+                  </li>
+                
+                <li class="search-menu-item hide-on-mobile hide-on-tablet"><a href="#search-lightbox" class="lightbox mfp-inline"><i class="fa fa-search-line"></i></a></li>
+              </ul>
+            </nav>
+            <a href="#search-lightbox" class="lightbox epcl-search-button mfp-inline hide-on-tablet hide-on-desktop"><i class="fa fa-search-line"></i></a>
+            <!-- end: .main-nav -->
+            <div class="clear"></div>
+            <div class="border hide-on-tablet hide-on-mobile"></div>
+          </div>    
+          <div class="clear"></div>
+        </div>
+        <!-- end: .menu-wrapper -->
+        <div class="clear"></div>
+      </header>
+      <div class="hide-on-mobile hide-on-tablet hide-on-desktop">
+        <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
+          <div class="search-wrapper section">
+            <form id="gridea-search-form" data-update="1585580544829" action="/search/index.html" class="search-form" _lpchecked="1">
+              <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..." required="">
+              <button type="submit" class="submit" aria-label="Submit">
+                <i class="fa fa-search-line"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+
+        <div class="center content">
+          <div class="featured-image cover" style="background-image: url('/media/images/gridea.jpg');">
+            <div class="meta top"> 
+              <time class="meta-info" style="float:left;" datetime="2020-03-30"><i class="fa fa-calendar"></i><span class="lately">2 分钟前</span></time>
+              
+              <a href="https://gaomaoqi.github.io/post/mst/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/mst/"> </span>
+              </a>
+              <span id="/mst/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              
+            </div>
+            <div class="info">
+              <div class="tags ">
+                
+              </div>
+              <h1 class="title ularge white bold">【图论算法】最小生成树（MST）</h1>
+            </div>
+          </div>
+        </div>  
+
+        <div class="epcl-page-wrapper">
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text">
+                  <p><strong>GMQ出品，最小生成树（MST）概念、算法、基础例题及代码详解</strong></p>
+<!-- more -->
+<p>一、生成树的定义</p>
+<p><strong>生成树</strong>：一个|V|个点的无向连通图中，取其中|V|-1条边，并连接所有的顶点，则为原图的一棵生成树。</p>
+<p><strong>树的属性</strong>：树是图的一种特殊形态。一个图G是树当且仅当以下任意一个条件成立：</p>
+<ul>
+<li>
+<p>G有V-1条边，无圈；</p>
+</li>
+<li>
+<p>G有V-1条边，连通；</p>
+</li>
+<li>
+<p>任意两点只有唯一的简单路径；</p>
+</li>
+<li>
+<p>G连通，但任意删除一条边后不连通；</p>
+</li>
+</ul>
+<h1 id="二-最小生成树的定义">二、最小生成树的定义</h1>
+<p><strong>最小生成树</strong>：在一张<strong>带权的无向连通图</strong>中，<strong>各边权和为最小的一棵生成树</strong>即为最小生成树。</p>
+<p>简单讲：<u>找出连接所有点的最低成本路线</u></p>
+<p>示意图：</p>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/03/30/GuAUEV.png" alt="GuAUEV.png" loading="lazy"></figure>
+<blockquote>
+<p>红边连接了所有顶点，</p>
+<p>所以构成一棵生成树，</p>
+<p>权和=1+2+2+4+4+7+8+9。</p>
+</blockquote>
+<h1 id="三-最小生成树的特性">三、最小生成树的特性</h1>
+<p><strong>环属性</strong>：一棵生成树上，增加一条边e，再删除e所在环上的最大边，会得到另一棵“更好”的生成树(如果e不是最大边)</p>
+<p><strong>剪切属性</strong>：在图中，剪切将顶点划分成两个不相交集合。交叉边为这些顶点在两个不同集合的边。对于任何一个剪切，各条最小的交叉边都属于某个MST，且每个MST中都包含一条最小交叉边。</p>
+<p><strong>最小边原则</strong>：图中权值最小的边(如果唯一的话)一定在最小生成树上。</p>
+<p><strong>唯一性</strong>：一棵生成树上，如果各边的权都不相同，则最小生成树是唯一的。反之不然。</p>
+<h1 id="四-最小生成树的算法">四、最小生成树的算法</h1>
+<p><strong>无向图的最小生成树（贪心思想）</strong></p>
+<ul>
+<li>
+<p>Kruskal算法，适用于边少的图</p>
+</li>
+<li>
+<p>Prim算法，适用于点少的图</p>
+</li>
+</ul>
+<h2 id="kruskal算法">Kruskal算法</h2>
+<h3 id="算法思想">算法思想</h3>
+<p>Kruskal算法是一种<strong>贪心</strong>算法，它是<strong>将边按权值排序</strong>，每次从剩下的边集中<strong>选择权值最小且两个端点不在同一集合的边</strong>加入生成树中，反复操作，直到加入了n-1条边。</p>
+<h3 id="算法步骤">算法步骤</h3>
+<ol>
+<li>
+<p>将图G中的边按权值从小到大排序；</p>
+</li>
+<li>
+<p>按照权值从小到大依次选边。若当前选取的边加入后使生成树T形成环，则舍弃当前边；否则标记当前边并计数；</p>
+</li>
+<li>
+<p>重复“2”的操作，直到生成树T中包含n-1条边为止。否则当遍历完所有的边后，都不能选取n-1条边，表示最小生成树不存在。</p>
+</li>
+</ol>
+<figure data-type="image" tabindex="2"><img src="https://s1.ax1x.com/2020/03/30/GummY6.png" alt="K算法.png" loading="lazy"></figure>
+<p>算法的关键在于如何判定新加入的边会不会使图G‘产生环，在这里使用<strong>并查集</strong>，<strong>如果新加入边的两个端点在并查集的同一个集合中，说明存在环，需要舍弃这条边；否则保留当前边，并合并涉及的两个集合</strong>。用并查集优化后总的时间复杂度为O(mlogm+mα(n))</p>
+<h3 id="算法核心代码">算法核心代码</h3>
+<pre><code class="language-c++">bool cmp(constEdge &amp;x,constEdge &amp;y) {return x.z&lt;y.z;}
+int Getfather(int x) {//查找祖先
+	if(prt[x]==x)return x;
+	prt[x]=Getfather(prt[x]);
+   	return prt[x];
+}
+void kruskal() {//kruskal核心程序
+	intf1,f2,k,i;k=0;
+    for(i=1;i&lt;=n;i++)prt[i]=i;//初始化
+    for(i=1;i&lt;=m;i++) {
+		f1=Getfather(a[i].x);
+		f2=Getfather(a[i].y);
+		if(f1!=f2){//非环
+            ans=ans+a[i].z;
+            prt[f1]=f2;//合并不相同的两个集合
+            k++;
+            if(k==n-1) break;
+        }
+    }
+    if(k&lt;n-1) {
+        cout&lt;&lt;&quot;Impossible&quot;&lt;&lt;endl;
+        bj=0;
+        return;
+    }
+}
+int main(){
+	cin&gt;&gt;n&gt;&gt;m;
+	ans=0;
+	bj=1;
+	for(inti=1;i&lt;=m;i++)cin&gt;&gt;a[i].x&gt;&gt;a[i].y&gt;&gt;a[i].z;//结构体存储
+	sort(a+1,a+m+1,cmp);
+	kruskal();
+	if(bj)cout&lt;&lt;ans&lt;&lt;endl;
+}
+</code></pre>
+<h3 id="该算法例题">该算法例题</h3>
+<h4 id="1452-mst练习修复公路2988">1452 -- 【MST练习】修复公路2988</h4>
+<pre><code>Description
+
+A地区在地震过后，连接所有村庄的公路都造成了损坏而无法通车。政府派人修复这些公路。
+给出A地区的村庄数N，和公路数M，公路是双向的。并告诉你每条公路的连着哪两个村庄，并告诉你什么时候能修完这条公路。问最早什么时候任意两个村庄能够通车，即最早什么时候任意两条村庄都存在至少一条修复完成的道路（可以由多条公路连成一条道路）
+
+Input
+
+第1行两个正整数N，M（N&lt;=1000，M&lt;=100000）
+下面M行，每行3个正整数x, y, t，告诉你这条公路连着x,y两个村庄，在时间t时能修复完成这条公路。（x&lt;=N，y&lt;=N，t&lt;=100000）
+
+Output
+
+如果全部公路修复完毕仍然存在两个村庄无法通车，则输出-1，否则输出最早什么时候任意两个村庄能够通车。
+
+Sample Input
+
+4 4 
+1 2 6 
+1 3 4 
+1 4 5 
+4 2 3
+
+Sample Output
+
+5
+</code></pre>
+<p>显然，这道题应该输出的是<strong>接边最大时间（即权值）</strong></p>
+<p>代码如下（注意注释内容）：</p>
+<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+#define maxn 100010
+using namespace std;
+struct star{
+	int x,y,k;
+}a[maxn];
+bool did(star ax,star by) {
+	return ax.k&lt;by.k;
+}
+int fa[maxn];//并查集 
+int getf(int x) {
+	if(fa[x]==x) {
+		return x;
+	}
+	else {
+		fa[x]=getf(fa[x]);
+		return fa[x];
+	}
+}
+int n,m;
+int main() {
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i=1; i&lt;=n; i++) {
+    	fa[i]=i;
+	}
+    for(int i=1; i&lt;=m; i++) {
+    	cin&gt;&gt;a[i].x&gt;&gt;a[i].y&gt;&gt;a[i].k;//结构体存边
+	}
+	sort(a+1,a+m+1,did);
+	int sum=0;//记录接边次数 
+	int t=0;//记录接边最大时间 
+	for(int i=1; i&lt;=m+1; i++) {//Kruskal算法过程
+		if(i==m+1) {//无法生成
+			cout&lt;&lt;&quot;-1&quot;;
+			return 0;
+		}
+		if(sum&gt;=n-1) break;//已经生成
+		if(getf(a[i].x)!=getf(a[i].y)) {//非环
+			sum++;//记录接边次数
+			fa[getf(a[i].x)]=getf(a[i].y);//合并
+			t=max(t,a[i].k);//针对本题记录接边最大时间
+		}
+		if(sum&gt;=n-1) break;//已经生成
+	}
+	cout&lt;&lt;t&lt;&lt;endl;//输出接边最大时间
+    return 0;
+}
+</code></pre>
+<h4 id="1455-mst练习联络员">1455 -- 【MST练习】联络员</h4>
+<pre><code>Description
+
+Tyvj已经一岁了，网站也由最初的几个用户增加到了上万个用户，随着Tyvj网站的逐步壮大，管理员的数目也越来越多，现在你身为Tyvj管理层的联络员，希望你找到一些通信渠道，使得管理员两两都可以联络（直接或者是间接都可以）。Tyvj是一个公益性的网站，没有过多的利润，所以你要尽可能的使费用少才可以。
+目前你已经知道，Tyvj的通信渠道分为两大类，一类是必选通信渠道，无论价格多少，你都需要把所有的都选择上；还有一类是选择性的通信渠道，你可以从中挑选一些作为最终管理员联络的通信渠道。数据保证给出的通行渠道可以让所有的管理员联通。
+　　
+Input
+
+第一行n，m表示Tyvj一共有n个管理员，有m个通信渠道;
+第二行到m+1行，每行四个非负整数，p,u,v,w 当p=1时，表示这个通信渠道为必选通信渠道；当p=2时，表示这个通信渠道为选择性通信渠道；u,v,w表示本条信息描述的是u，v管理员之间的通信渠道，u可以收到v的信息，v也可以收到u的信息，w表示费用。
+
+Output
+
+输出仅一个整数表示最小的通信费用。
+
+Sample Input
+
+5 6
+1 1 2 1
+1 2 3 1
+1 3 4 1
+1 4 1 1
+2 2 5 10
+2 2 5 5
+
+Sample Output
+
+9
+
+Hint
+【样例解释】
+1-2-3-4-1存在四个必选渠道，形成一个环，互相可以到达。需要让所有管理员联通，需要联通2号和5号管理员，选择费用为5的渠道，所以总的费用为9。
+【注意】
+U,v之间可能存在多条通信渠道，你的程序应该累加所有u,v之间的必选通行渠道
+【数据范围】
+对于30%的数据，n&lt;=10，m&lt;=100
+对于50%的数据, n&lt;=200，m&lt;=1000
+对于100%的数据，n&lt;=2000，m&lt;=10000
+</code></pre>
+<p>这道题存在“必选通信渠道”，但我们的解决方式也简单粗暴——<strong>直接连接解决一切</strong>（但是别忘了<strong>必选通道的价格应该计入答案</strong>）</p>
+<p>代码如下：</p>
+<pre><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+#define maxn 100010
+using namespace std;
+struct star{
+	int x,y,k;
+}a[maxn];
+bool did(star ax,star by) {
+	return ax.k&lt;by.k;
+}
+int fa[maxn];//并查集 
+int getf(int x) {
+	if(fa[x]==x) {
+		return x;
+	}
+	else {
+		fa[x]=getf(fa[x]);
+		return fa[x];
+	}
+	return 0x7fffffff;//这是不可能执行的（划掉
+}
+int n,m;
+int main() {
+    cin&gt;&gt;n&gt;&gt;m;
+    for(int i=1; i&lt;=n; i++) {
+    	fa[i]=i;
+	}
+	int ans=0;//记录权值和 
+    for(int i=1; i&lt;=m; i++) {
+    	int p,u,v,w;
+    	cin&gt;&gt;p;
+    	if(p==1) {//必选通道，直接连接
+    		cin&gt;&gt;u&gt;&gt;v&gt;&gt;w;
+    		fa[getf(u)]=getf(v);
+    		ans+=w;
+		}
+    	else cin&gt;&gt;a[i].x&gt;&gt;a[i].y&gt;&gt;a[i].k;
+	}
+	sort(a+1,a+m+1,did);
+	int sum=0;//记录接边次数 
+	for(int i=1; i&lt;=m; i++) {
+		if(sum&gt;=n-1) break;
+		if(getf(a[i].x)!=getf(a[i].y)) {
+			sum++;
+			fa[getf(a[i].x)]=getf(a[i].y);
+			ans+=a[i].k;
+		}
+		if(sum&gt;=n-1) break;
+	}
+	cout&lt;&lt;ans&lt;&lt;endl;
+    return 0;
+}
+</code></pre>
+<h2 id="prim算法">Prim算法</h2>
+<h3 id="算法步骤-2">算法步骤</h3>
+<ol>
+<li>将1号节点置入集合S中。</li>
+<li>找到所有<strong>连接S中的节点和非S中的节点的边</strong>中的<strong>权值最小的那一条</strong>，并标记这条边，同时将<strong>连接的非S中的节点加入S集合</strong>。</li>
+<li>重复“2”步骤，直到所有节点都在S中了。</li>
+</ol>
+<figure data-type="image" tabindex="3"><img src="https://s1.ax1x.com/2020/03/30/GuBSSS.png" alt="P算法" loading="lazy"></figure>
+<p><strong>任意时刻的中间结果都是一棵树</strong>：从某一个点开始，每次都花最小的代价，用一条边加进一个新的点。</p>
+<h3 id="证明过程"><s>证明过程</s></h3>
+<p><s>这里啥也没有</s></p>
+<h3 id="核心代码">核心代码</h3>
+<p><s>这不是我的码风</s></p>
+<pre><code class="language-c++">int vst[505];//vst[i]标记顶点i是否加入最小生成树中
+int d[505];//d[i]表示不是生成树中点i到当前生成树中点到最小值
+int g[505][505],n,m,ans=0;
+void Read()//读入数据,构建图
+{   
+    inti,j,x,y,w;
+    cin&gt;&gt;n&gt;&gt;m;
+    for(i=1;i&lt;=n;i++)
+        for(j=1;j&lt;=n;j++)g[i][j]=INF;
+    for(i=1;i&lt;=m;i++){cin&gt;&gt;x&gt;&gt;y&gt;&gt;w;g[x][y]=g[y][x]=w;}
+}
+void Prim(intv0){   
+    inti,j,k,minn;memset(vst,0,sizeof(vst));  //初始化生成树点集合
+    for(i=1;i&lt;=n;i++)d[i]=INF;d[v0]=0;ans=0;for(i=1;i&lt;=n;i++) //选择n个点
+    {   
+        minn=INF;
+        for(j=1;j&lt;=n;j++)//选择最小边if(vst[j]==0 &amp;&amp; minn&gt;d[j])
+        {
+            minn=d[j];
+            k=j;
+        }
+        vst[k]=1;  //标记
+        ans+=d[k];for(j=1;j&lt;=n;j++)   //修改d数组
+            if(vst[j]==0&amp;&amp;d[j]&gt;g[k][j])d[j]=g[k][j];
+    }
+}
+int main(){
+    Read();
+    Prim(1);
+    cout&lt;&lt;ans&lt;&lt;endl;
+}
+</code></pre>
+<h3 id="优化方法">优化方法</h3>
+<figure data-type="image" tabindex="4"><img src="https://s1.ax1x.com/2020/03/30/GuDM38.png" alt="PY" loading="lazy"></figure>
+<h3 id="该算法例题-2">该算法例题</h3>
+<h4 id="1450-mst练习局域网1123">1450 -- 【MST练习】局域网1123</h4>
+<pre><code>Description
+
+某个局域网内有n(n&lt;=100)台计算机，由于搭建局域网时工作人员的疏忽，现在局域网内的连接形成了回路，我们知道如果局域网形成回路那么数据将不停的在回路内传输，造成网络卡的现象。因为连接计算机的网线本身不同，所以有一些连线不是很畅通，我们用f(i,j)表示i,j之间连接的畅通程度(f(i,j)&lt;=1000)，f(i,j)值越小表示i,j之间连接越通畅，f(i,j)为0表示i,j之间无网线连接。现在我们需要解决回路问题，我们将除去一些连线，使得网络中没有回路，并且被除去网线的Σf(i,j)最大，请求出这个最大值。
+
+Input
+
+第一行两个正整数n和k；
+接下来的k行每行三个正整数i j m，表示i,j两台计算机之间有网线联通，通畅程度为m。
+
+Output
+
+输出仅一个正整数，Σf(i,j)的最大值
+
+Sample Input
+
+5 5
+1 2 8
+1 3 1
+1 5 3
+2 4 5
+3 4 2
+
+Sample Output
+
+8
+</code></pre>
+<p>废话少说，上代码：</p>
+<pre><code class="language-c++">#include&lt;iostream&gt;
+#include&lt;cstdio&gt;
+#define maxn 5010
+#define yao_bu_ke_ji 0x3f3f3f3f//其实就是inf啦~~
+using namespace std;
+bool join[maxn];
+int d[maxn];
+int am[maxn][maxn];//邻接矩阵
+int n,m;
+int prim() {
+	int minn=yao_bu_ke_ji;
+	for(int i=1; i&lt;=n; i++) {
+		d[i]=yao_bu_ke_ji;
+	}
+	d[1]=0;
+	int ans=0,jo;
+	for(int i=1; i&lt;=n; i++) {
+		minn=yao_bu_ke_ji;
+		for(int j=1; j&lt;=n; j++) { 
+			if(join[j]==0) {//未加入集合
+				if(d[j]&lt;minn) {//边权小
+					minn=d[j];//更新
+					jo=j;
+				}
+			}
+		}
+		join[jo]=1;//标记
+		ans+=d[jo];
+		for(int j=1; j&lt;=n; j++) {
+			if(join[j]==0) {
+				d[j]=min(am[jo][j],d[j]);//更新d[]
+			}
+		}
+	}
+	return ans;
+}
+int main() {
+	cin&gt;&gt;n&gt;&gt;m;
+	for(int i=1; i&lt;=n; i++) {
+		for(int j=1; j&lt;=n; j++) {
+			am[i][j]=yao_bu_ke_ji;
+		}
+	}
+	int sum=0;
+	for(int i=1; i&lt;=m; i++) {
+		int x,y,k;
+		cin&gt;&gt;x&gt;&gt;y&gt;&gt;k;
+		am[x][y]=k;
+		am[y][x]=k;
+		sum+=k;
+	}
+	cout&lt;&lt;sum-prim();
+	return 0;
+}
+</code></pre>
+<h4 id="1451-mst练习繁忙的都市scoi20051406">1451 -- 【MST练习】繁忙的都市（SCOI2005）1406</h4>
+<pre><code>Description
+
+城市C是一个非常繁忙的大都市，城市中的道路十分的拥挤，于是市长决定对其中的道路进行改造。城市C的道路是这样分布的：城市中有n个交叉路口，有些交叉路口之间有道路相连，两个交叉路口之间最多有一条道路相连接。这些道路是双向的，且把所有的交叉路口直接或间接的连接起来了。每条道路都有一个分值，分值越小表示这个道路越繁忙，越需要进行改造。但是市政府的资金有限，市长希望进行改造的道路越少越好，于是他提出下面的要求：
+1．改造的那些道路能够把所有的交叉路口直接或间接的连通起来。
+2．在满足要求1的情况下，改造的道路尽量少。
+3．在满足要求1、2的情况下，改造的那些道路中分值最大的道路分值尽量小。
+任务：作为市规划局的你，应当作出最佳的决策，选择那些道路应当被修建。
+
+Input
+
+第一行有两个整数n,m表示城市有n个交叉路口，m条道路。
+接下来m行是对每条道路的描述，u, v, c表示交叉路口u和v之间有道路相连，分值为c。(1≤n≤300，1≤c≤10000，1≤m≤8000)
+
+Output
+
+输出两个整数s, max，表示你选出了几条道路，分值最大的那条道路的分值是多少。
+
+Sample Input
+
+4 5
+1 2 3
+1 4 5
+2 4 7
+2 3 6
+3 4 8
+
+Sample Output
+
+3 6
+</code></pre>
+<p>代码来咯（注释请参考上一题）：</p>
+<pre><code class="language-c++">#include&lt;iostream&gt;
+#include&lt;cstdio&gt;
+#define maxn 5010
+#define yao_bu_ke_ji 0x3f3f3f3f
+using namespace std;
+bool join[maxn];
+int d[maxn];
+int am[maxn][maxn];//邻接矩阵
+int n,m;
+int anm,anss;
+int prim() {
+	int minn=yao_bu_ke_ji;
+	for(int i=1; i&lt;=n; i++) {
+		d[i]=yao_bu_ke_ji;
+	}
+	d[1]=0;
+	int ans=0,jo;
+	for(int i=1; i&lt;=n; i++) {
+		minn=yao_bu_ke_ji;
+		for(int j=1; j&lt;=n; j++) {
+			if(join[j]==0) {
+				if(d[j]&lt;minn) {
+					minn=d[j];
+					jo=j;
+				}
+			}
+		}
+		anm=max(anm,d[jo]);
+		anss++;
+		join[jo]=1;
+		ans+=d[jo];
+		for(int j=1; j&lt;=n; j++) {
+			if(join[j]==0) {
+				d[j]=min(am[jo][j],d[j]);
+			}
+		}
+	}
+	return ans;
+}
+int main() {
+	cin&gt;&gt;n&gt;&gt;m;
+	for(int i=1; i&lt;=n; i++) {
+		for(int j=1; j&lt;=n; j++) {
+			am[i][j]=yao_bu_ke_ji;
+		}
+	}
+	for(int i=1; i&lt;=m; i++) {
+		int x,y,k;
+		cin&gt;&gt;x&gt;&gt;y&gt;&gt;k;
+		am[x][y]=k;
+		am[y][x]=k;
+	}
+	int did=prim();
+	cout&lt;&lt;anss-1&lt;&lt;&quot; &quot;&lt;&lt;anm;
+	return 0;
+}
+</code></pre>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3578965674,3079548089&amp;fm=26&amp;gp=0.jpg');"></div>
+                 <a href="https://gaomaoqi.github.io/post/tu-lun-suan-fa-tuo-bu-pai-xu/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2020-03-24">2020-03-24</time>
+                  <h4 class="title white no-margin">【图论算法】拓扑排序</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://gaomaoqi.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                
+                  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+<div class="clear"></div>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '20976b3088c4d7383701',
+    clientSecret: '0d99e2c56cc607910ee8d61c01bb3608df7e4d1d',
+    repo: 'GMQ-GitTalk',
+    owner: 'gaomaoqi',
+    admin: ['gaomaoqi'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+</script>
+
+                
+                
+              </div>
+            
+
+            </div>
+          </div>
+      </main>
+
+          <footer id="footer" class="grid-container">
+        <div class="widgets row gradient-effect">
+            <div class="default-sidebar border-effect">
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="tag_cloud-2" class="widget widget_epcl_posts_thumbs underline-effect">
+                  <h4 class="widget-title title white bordered">最新文章</h4>
+                  
+                  
+                  <article class="item post-0 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="https://gaomaoqi.github.io/post/mst/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('/media/images/gridea.jpg');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2020-03-30">2020-03-30</time>
+                      <h4 class="title usmall">
+                        <a href="https://gaomaoqi.github.io/post/mst/">【图论算法】最小生成树（MST）</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  <article class="item post-1 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="https://gaomaoqi.github.io/post/tu-lun-suan-fa-tuo-bu-pai-xu/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3578965674,3079548089&amp;fm=26&amp;gp=0.jpg');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2020-03-24">2020-03-24</time>
+                      <h4 class="title usmall">
+                        <a href="https://gaomaoqi.github.io/post/tu-lun-suan-fa-tuo-bu-pai-xu/">【图论算法】拓扑排序</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  <article class="item post-2 post type-post status-publish format-standard has-post-thumbnail hentry">
+                    <a href="https://gaomaoqi.github.io/post/kong-ke-a320/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1655715512,88546096&amp;fm=26&amp;gp=0.jpg');"></span>
+                    </a>
+                    <div class="info gradient-effect">
+                      <time datetime="2020-03-21">2020-03-21</time>
+                      <h4 class="title usmall">
+                        <a href="https://gaomaoqi.github.io/post/kong-ke-a320/">空客A320</a>
+                      </h4>
+                    </div>
+                    <div class="clear"></div>
+                  </article>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  <div class="clear"></div>
+                </section>
+              </div>
+
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="tag_cloud-2" class="widget widget_tag_cloud underline-effect">
+                  <h4 class="widget-title title white bordered">标签云</h4>
+                  <div class="tagcloud">
+                    
+                      <a href="https://gaomaoqi.github.io/tag/SWfAbg7QP/" class="ctag ctag-0 ctag-SWfAbg7QP" aria-label="">算法</a>
+                    
+                      <a href="https://gaomaoqi.github.io/tag/RD-jMNR6j/" class="ctag ctag-1 ctag-RD-jMNR6j" aria-label="">信息学</a>
+                    
+                      <a href="https://gaomaoqi.github.io/tag/bw2hQKoXk/" class="ctag ctag-2 ctag-bw2hQKoXk" aria-label="">客机</a>
+                    
+                      <a href="https://gaomaoqi.github.io/tag/x-F3EYggi/" class="ctag ctag-3 ctag-x-F3EYggi" aria-label="">民航</a>
+                    
+                      <a href="https://gaomaoqi.github.io/tag/dvUJhT2bt/" class="ctag ctag-4 ctag-dvUJhT2bt" aria-label="">杂谈</a>
+                    
+                      <a href="https://gaomaoqi.github.io/tag/DH9RBYxTE/" class="ctag ctag-5 ctag-DH9RBYxTE" aria-label="">关于本站</a>
+                    
+                      <a href="https://gaomaoqi.github.io/tag/Jpj6qhvfu/" class="ctag ctag-6 ctag-Jpj6qhvfu" aria-label="">Gridea</a>
+                    
+                  </div>
+                  <div class="clear"></div>
+                </section>
+              </div>
+
+              <div class="grid-33 tablet-grid-50 mobile-grid-100">
+                <section id="epcl_about-2" class="widget widget_epcl_about underline-effect">
+                  <h4 class="widget-title title white bordered">关于我</h4>
+                  <div class="avatar">
+                    <a href="" class="translate-effect thumb"><span class="fullimage cover" style="background-image: url(https://gaomaoqi.github.io/images/avatar.png);"></span></a>
+                  </div>
+                  <div class="info">
+                    <h4 class="title small author-name gradient-effect no-margin"><a href="">GMQ&#39;s blog</a></h4>
+                    <p class="founder">结庐在信竞，而无大佬喧。</p>
+                    <div class="social">
+                      
+                          
+                            <a href="github.com/gaomaoqi" class="translate-effect" target="_blank"><i class="fa fa-github"></i></a>
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                        
+                      
+                    </div> 
+                  </div>
+                  <div class="clear"></div>
+                  </section>
+              </div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="logo">
+          <a href="https://gaomaoqi.github.io"><img src="/media/images/gridea.png" alt=""></a>
+        </div>
+        <p class="published border-effect">
+          ©2019 共 9 篇文章
+          <br/>
+          Theme <a href="https://gridea.dev/" target="_blank">「breek」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
+        </p>
+        
+        <a href="javascript:void(0)" id="back-to-top" class="epcl-button dark" style="display:none">
+          <i class="fa fa-arrow"></i>
+        </a>
+    </footer>
+    
+    <div class="clear"></div>
+
+        
+
+      
+    <script src="https://gaomaoqi.github.io/media/js/functions-post.js"></script>
+
+    </div>
+    <!-- end: #wrapper -->
+  </body>
+</html>
