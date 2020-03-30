@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaomaoqi.github.io</id>
     <title>GMQ&apos;s blog</title>
-    <updated>2020-03-30T15:06:33.706Z</updated>
+    <updated>2020-03-30T15:07:24.044Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaomaoqi.github.io"/>
     <link rel="self" href="https://gaomaoqi.github.io/atom.xml"/>
@@ -20,7 +20,7 @@
 ]]></summary>
         <content type="html"><![CDATA[<p><strong>GMQ出品，最小生成树（MST）概念、算法、基础例题及代码详解</strong></p>
 <!-- more -->
-<p>一、生成树的定义</p>
+<h1 id="一-生成树的定义">一、生成树的定义</h1>
 <p><strong>生成树</strong>：一个|V|个点的无向连通图中，取其中|V|-1条边，并连接所有的顶点，则为原图的一棵生成树。</p>
 <p><strong>树的属性</strong>：树是图的一种特殊形态。一个图G是树当且仅当以下任意一个条件成立：</p>
 <ul>
