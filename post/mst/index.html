@@ -87,7 +87,7 @@
       <div class="hide-on-mobile hide-on-tablet hide-on-desktop">
         <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
           <div class="search-wrapper section">
-            <form id="gridea-search-form" data-update="1585581047186" action="/search/index.html" class="search-form" _lpchecked="1">
+            <form id="gridea-search-form" data-update="1585632471336" action="/search/index.html" class="search-form" _lpchecked="1">
               <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..." required="">
               <button type="submit" class="submit" aria-label="Submit">
                 <i class="fa fa-search-line"></i>
@@ -102,7 +102,7 @@
         <div class="center content">
           <div class="featured-image cover" style="background-image: url('https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2552796839,742313674&amp;fm=26&amp;gp=0.jpg');">
             <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="2020-03-30"><i class="fa fa-calendar"></i><span class="lately">11 分钟前</span></time>
+              <time class="meta-info" style="float:left;" datetime="2020-03-30"><i class="fa fa-calendar"></i><span class="lately">14 小时前</span></time>
               
               <a href="https://gaomaoqi.github.io/post/mst/#comments" class="comments meta-info" title="">
                 <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/mst/"> </span>
@@ -512,10 +512,10 @@ int main() {
 	cin&gt;&gt;n&gt;&gt;m;
 	for(int i=1; i&lt;=n; i++) {
 		for(int j=1; j&lt;=n; j++) {
-			am[i][j]=yao_bu_ke_ji;
+			am[i][j]=yao_bu_ke_ji;//初始化为inf
 		}
 	}
-	int sum=0;
+	int sum=0;//记录总权值
 	for(int i=1; i&lt;=m; i++) {
 		int x,y,k;
 		cin&gt;&gt;x&gt;&gt;y&gt;&gt;k;
@@ -523,7 +523,7 @@ int main() {
 		am[y][x]=k;
 		sum+=k;
 	}
-	cout&lt;&lt;sum-prim();
+	cout&lt;&lt;sum-prim();//总权值减去保留权值得到答案
 	return 0;
 }
 </code></pre>

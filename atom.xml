@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaomaoqi.github.io</id>
     <title>GMQ&apos;s blog</title>
-    <updated>2020-03-30T15:11:10.906Z</updated>
+    <updated>2020-03-31T05:27:55.093Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaomaoqi.github.io"/>
     <link rel="self" href="https://gaomaoqi.github.io/atom.xml"/>
@@ -402,10 +402,10 @@ int main() {
 	cin&gt;&gt;n&gt;&gt;m;
 	for(int i=1; i&lt;=n; i++) {
 		for(int j=1; j&lt;=n; j++) {
-			am[i][j]=yao_bu_ke_ji;
+			am[i][j]=yao_bu_ke_ji;//初始化为inf
 		}
 	}
-	int sum=0;
+	int sum=0;//记录总权值
 	for(int i=1; i&lt;=m; i++) {
 		int x,y,k;
 		cin&gt;&gt;x&gt;&gt;y&gt;&gt;k;
@@ -413,7 +413,7 @@ int main() {
 		am[y][x]=k;
 		sum+=k;
 	}
-	cout&lt;&lt;sum-prim();
+	cout&lt;&lt;sum-prim();//总权值减去保留权值得到答案
 	return 0;
 }
 </code></pre>
