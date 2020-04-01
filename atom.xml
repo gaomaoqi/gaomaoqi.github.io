@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaomaoqi.github.io</id>
     <title>GMQ&apos;s blog</title>
-    <updated>2020-03-31T10:57:52.605Z</updated>
+    <updated>2020-04-01T10:54:11.222Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaomaoqi.github.io"/>
     <link rel="self" href="https://gaomaoqi.github.io/atom.xml"/>
@@ -24,7 +24,7 @@
 <ul>
 <li><a href="https://gaomaoqi.github.io/post/tu-lun-suan-fa-tuo-bu-pai-xu/">【图论算法】拓扑排序</a></li>
 <li><a href="https://gaomaoqi.github.io/post/mst/">【图论算法】最小生成树（MST）</a></li>
-<li><a href="https://gaomaoqi.github.io/post/tu-lun-suan-fa-zui-duan-lu-jing/">【图论算法】最短路径</a>&lt;==由于Laxat公式渲染失效，请在<a href="https://www.luogu.com.cn/blog/gaomaoqi2022/post-tu-lun-suan-fa-zui-duan-lu-jing">洛谷博客</a>查看</li>
+<li><a href="https://gaomaoqi.github.io/post/tu-lun-suan-fa-zui-duan-lu-jing/">【图论算法】最短路径</a>&lt;==由于Latax公式渲染失效，请在<a href="https://www.luogu.com.cn/blog/gaomaoqi2022/post-tu-lun-suan-fa-zui-duan-lu-jing">洛谷博客</a>查看</li>
 </ul>
 <h1 id="my-luogu-blog">My Luogu Blog：</h1>
 <ul>
