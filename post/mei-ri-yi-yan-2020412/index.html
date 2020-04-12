@@ -7,7 +7,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="结庐在信竞，而无大佬喧。">
 <meta name="theme-color" content="#000">
-<title>朋友们 | GMQ&#39;s blog</title>
+<title>【每日一言】2020.4.12 | GMQ&#39;s blog</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1586702123669">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -27,8 +27,8 @@
 
 
 
-    <meta name="description" content="朋友们" />
-    <meta name="keywords" content="关于本站" />
+    <meta name="description" content="【每日一言】2020.4.12" />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -183,8 +183,7 @@
       <div class="sidebar-body gemini" id="sidebar_body">
         
           
-            <div class="post-side-meta" id="post_side_meta">
-              
+            
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
@@ -239,191 +238,6 @@
 
 
 </div>
-            </div>
-            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
-              <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number no_compress" id="toc_wrapper">
-    <ul class="markdownIt-TOC">
-<li><a href="#yuzhenghao">yuzhenghao</a></li>
-<li><a href="#continue">continue</a></li>
-<li><a href="#gaobeifan2022">gaobeifan2022</a></li>
-</ul>
-
-  </div>
-</div>
-
-<script>
-
-let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
-let active = 'active-show', activeClass = 'active-current';
-let tocWrapper = document.querySelector('#toc_wrapper');
-let tocContent = tocWrapper.children[0];
-let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
-
-function addTocNumber(elem, deep) {
-  if (!elem) {
-    return;
-  }
-  let prop = elem.__proto__;
-
-  if (prop === HTMLUListElement.prototype) {
-    for (let i = 0; i < elem.children.length; i++) {
-      addTocNumber(elem.children[i], deep + (i + 1) + '.');
-    }
-  } else if (prop === HTMLLIElement.prototype) {
-    // 保存li元素
-    if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-      lList.push(elem);
-    }
-    for (let i = 0; i < elem.children.length; i++) {
-      let cur = elem.children[i];
-      if (cur.__proto__ === HTMLAnchorElement.prototype) {
-        if (autoNumber) {
-          cur.text =  deep + ' ' + cur.text;
-        }
-      } else if (cur.__proto__ === HTMLUListElement.prototype) {
-        addTocNumber(cur, deep);
-      }
-    }
-  }
-}
-
-function removeParentActiveClass() {
-  let parents = tocContent.querySelectorAll('.'+active)
-  parents.forEach(function(elem) {
-    elem.classList.remove(active);
-  });
-}
-
-function addActiveClass(index) {
-  if (index >= 0 && index < hList.length) {
-    lList[index].classList.add(activeClass);
-  }
-}
-
-function removeActiveClass(index) {
-  if (index >= 0 && index < hList.length) {
-    lList[index].classList.remove(activeClass);
-  }
-}
-
-function addActiveLiElemment(elem, parent) {
-  if (!elem || elem === parent) {
-    return;
-  } else {
-    if (elem.__proto__ === HTMLLIElement.prototype) {
-      elem.classList.add(active);
-    }
-    addActiveLiElemment(elem.parentElement, parent);
-  }
-}
-
-function showToc() {
-  if (tocWrapper) {
-    postBody = document.querySelector('#post_body');
-    for (let i = 0; i < postBody.children.length; i++) {
-      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-        hList.push(postBody.children[i]);
-      }
-    }
-    if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-    } else if (tocWrapper.classList.contains('no_compress')){
-      tocContent.classList.add('expanded');
-    } else {
-      if (hList.length > 10) {
-        active = 'active-hidden'
-        tocContent.classList.add('closed');
-      } else {
-        tocContent.classList.add('expanded');
-      }
-    }
-  }
-}
-
-(function() {
-  // 处理不是从#一级标题开始目录
-  if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-    let con = tocContent.children[0].children[0];
-    tocContent.innerHTML = con.innerHTML;
-  }
-  let markdownItTOC = document.querySelector('.markdownIt-TOC');
-  let innerHeight = window.innerHeight;
-  markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-  addTocNumber(tocContent, '');
-})();
-
-document.addEventListener('scroll', function(e) {
-  if (lList.length <= 0) {
-    return;
-  }
-  let scrollTop = document.scrollingElement.scrollTop + 10;
-  let dir;
-
-  if (lastTop - scrollTop > 0) {
-    dir = 'up';
-  } else {
-    dir = 'down';
-  }
-
-  lastTop = scrollTop;
-  if (scrollTop <= 0) {
-    if (lastIndex >= 0 && lastIndex < hList.length) {
-      lList[lastIndex].classList.remove(activeClass);
-    }
-    return;
-  }
-
-  let current = 0, hasFind = false;
-  for (let i = 0; i < hList.length; i++) {
-    if (hList[i].offsetTop > scrollTop) {
-      current = i;
-      hasFind = true;
-      break;
-    }
-  }
-  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-    current = hList.length - 1;
-  } else {
-    current--;
-  }
-  if (dir === 'down') {
-    if (current > lastIndex) {
-      addActiveClass(current);
-      removeActiveClass(lastIndex) 
-      lastIndex = current;
-      removeParentActiveClass();
-      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
-    }
-  } else {
-    if (current < lastIndex) {
-      addActiveClass(current);
-      removeActiveClass(lastIndex);
-      lastIndex = current;
-      removeParentActiveClass();
-      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
-    }
-  }
-});
-
-window.addEventListener('load', function() {
-  showToc();
-  document.querySelector('#sidebar').style='display: block;';
-  tocWrapper.classList.add('toc-active');
-  setTimeout(function() {
-    if ("createEvent" in document) {
-      let evt = document.createEvent("HTMLEvents");
-      evt.initEvent("scroll", false, true);
-      document.dispatchEvent(evt);
-    }
-    else {
-      document.fireEvent("scroll");
-    }
-  }, 500)
-})
-
-</script>
-            </div>
           
         
       </div>
@@ -511,8 +325,8 @@ window.addEventListener('load', function() {
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://gaomaoqi.github.io/post/peng-you-men/">
-      朋友们
+    <a class="post-title-link" href="https://gaomaoqi.github.io/post/mei-ri-yi-yan-2020412/">
+      【每日一言】2020.4.12
     </a>
   </h1>
   <div class="post-meta">
@@ -520,22 +334,9 @@ window.addEventListener('load', function() {
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2020-03-20</span>
+      <span>2020-04-12</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
-    
-      <span class="meta-item">
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://gaomaoqi.github.io/tag/DH9RBYxTE/">
-              <span>关于本站</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
@@ -544,14 +345,14 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>110<span class="pc-show">字数</span></span>
+      <span>65<span class="pc-show">字数</span></span>
     </span>
     
       
       
         
       
-      <span id="/post/peng-you-men/" data-flag-title="朋友们" class="meta-item pc-show leancloud_visitors">
+      <span id="/post/mei-ri-yi-yan-2020412/" data-flag-title="【每日一言】2020.4.12" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
@@ -560,16 +361,8 @@ window.addEventListener('load', function() {
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <p><strong>感谢我的朋友们，没有他们就没有这个博客，我也会比现在弱的多</strong></p>
+                <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mi mathvariant="normal">我</mi><mi mathvariant="normal">们</mi><mi mathvariant="normal">总</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">在</mi><mi mathvariant="normal">注</mi><mi mathvariant="normal">意</mi><mi mathvariant="normal">错</mi><mi mathvariant="normal">过</mi><mi mathvariant="normal">太</mi><mi mathvariant="normal">多</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">却</mi><mi mathvariant="normal">不</mi><mi mathvariant="normal">注</mi><mi mathvariant="normal">意</mi><mi mathvariant="normal">自</mi><mi mathvariant="normal">己</mi><mi mathvariant="normal">拥</mi><mi mathvariant="normal">有</mi><mi mathvariant="normal">多</mi><mi mathvariant="normal">少</mi><mi mathvariant="normal">。</mi></mstyle></mrow><annotation encoding="application/x-tex">{\color{red}我们总是在注意错过太多，却不注意自己拥有多少。}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord"><span class="mord cjk_fallback" style="color:red;">我</span><span class="mord cjk_fallback" style="color:red;">们</span><span class="mord cjk_fallback" style="color:red;">总</span><span class="mord cjk_fallback" style="color:red;">是</span><span class="mord cjk_fallback" style="color:red;">在</span><span class="mord cjk_fallback" style="color:red;">注</span><span class="mord cjk_fallback" style="color:red;">意</span><span class="mord cjk_fallback" style="color:red;">错</span><span class="mord cjk_fallback" style="color:red;">过</span><span class="mord cjk_fallback" style="color:red;">太</span><span class="mord cjk_fallback" style="color:red;">多</span><span class="mord cjk_fallback" style="color:red;">，</span><span class="mord cjk_fallback" style="color:red;">却</span><span class="mord cjk_fallback" style="color:red;">不</span><span class="mord cjk_fallback" style="color:red;">注</span><span class="mord cjk_fallback" style="color:red;">意</span><span class="mord cjk_fallback" style="color:red;">自</span><span class="mord cjk_fallback" style="color:red;">己</span><span class="mord cjk_fallback" style="color:red;">拥</span><span class="mord cjk_fallback" style="color:red;">有</span><span class="mord cjk_fallback" style="color:red;">多</span><span class="mord cjk_fallback" style="color:red;">少</span><span class="mord cjk_fallback" style="color:red;">。</span></span></span></span></span></p>
 <!-- more -->
-<h1 id="yuzhenghao"><a href="https://www.luogu.com.cn/user/233809">yuzhenghao</a></h1>
-<p>与我是同道中人（民航），<a href="https://yuzhenghao.cn/">他的博客</a>是使我决定建博客的根本原因。</p>
-<h1 id="continue"><a href="https://www.luogu.com.cn/user/313821">continue</a></h1>
-<p>促使我搭成了这个博客，<a href="https://mrcontinue.xyz/">她的博客</a>也促使我买了域名，她还无私地向我和GBF提供许多资料</p>
-<h1 id="gaobeifan2022"><a href="https://www.luogu.com.cn/user/234930">gaobeifan2022</a></h1>
-<p>帮我无数次康代码，康完代码只留下一句：<br>
-<img src="https://s1.ax1x.com/2020/03/14/8QDEn0.jpg" alt="别说了，去做题吧" loading="lazy"></p>
-
               </div>
               <div class="post-footer">
   <ul class="post-copyright">
@@ -579,7 +372,7 @@ window.addEventListener('load', function() {
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://gaomaoqi.github.io/post/peng-you-men/" title="朋友们">朋友们</a>
+      <a href="https://gaomaoqi.github.io/post/mei-ri-yi-yan-2020412/" title="【每日一言】2020.4.12">【每日一言】2020.4.12</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -588,21 +381,15 @@ window.addEventListener('load', function() {
   </ul>
   <div class="tags">
     
-      <a href="https://gaomaoqi.github.io/tag/DH9RBYxTE/"># 关于本站</a>
-    
   </div>
   <div class="nav">
     <div class="nav-prev">
       
-        <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="美国也爱社会主义你信吗" href="https://gaomaoqi.github.io/post/mei-guo-ye-ai-she-hui-zhu-yi-ni-xin-ma/">美国也爱社会主义你信吗</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="美国也爱社会主义你信吗" href="https://gaomaoqi.github.io/post/mei-guo-ye-ai-she-hui-zhu-yi-ni-xin-ma/">上一篇</a>
-      
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="大事记" href="https://gaomaoqi.github.io/post/da-shi-ji/">大事记</a>
-        <a class="nav-mobile-next" title="大事记" href="https://gaomaoqi.github.io/post/da-shi-ji/">下一篇</a>
+        <a class="nav-pc-next" title="图论算法集合" href="https://gaomaoqi.github.io/post/tu-lun-suan-fa-ji-he/">图论算法集合</a>
+        <a class="nav-mobile-next" title="图论算法集合" href="https://gaomaoqi.github.io/post/tu-lun-suan-fa-ji-he/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>

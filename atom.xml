@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaomaoqi.github.io</id>
     <title>GMQ&apos;s blog</title>
-    <updated>2020-04-12T14:05:20.901Z</updated>
+    <updated>2020-04-12T14:35:27.022Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaomaoqi.github.io"/>
     <link rel="self" href="https://gaomaoqi.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://gaomaoqi.github.io/images/avatar.png</logo>
     <icon>https://gaomaoqi.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, GMQ&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[【每日一言】2020.4.12]]></title>
+        <id>https://gaomaoqi.github.io/post/mei-ri-yi-yan-2020412/</id>
+        <link href="https://gaomaoqi.github.io/post/mei-ri-yi-yan-2020412/">
+        </link>
+        <updated>2020-04-12T14:30:26.000Z</updated>
+        <content type="html"><![CDATA[<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mi mathvariant="normal">我</mi><mi mathvariant="normal">们</mi><mi mathvariant="normal">总</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">在</mi><mi mathvariant="normal">注</mi><mi mathvariant="normal">意</mi><mi mathvariant="normal">错</mi><mi mathvariant="normal">过</mi><mi mathvariant="normal">太</mi><mi mathvariant="normal">多</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">却</mi><mi mathvariant="normal">不</mi><mi mathvariant="normal">注</mi><mi mathvariant="normal">意</mi><mi mathvariant="normal">自</mi><mi mathvariant="normal">己</mi><mi mathvariant="normal">拥</mi><mi mathvariant="normal">有</mi><mi mathvariant="normal">多</mi><mi mathvariant="normal">少</mi><mi mathvariant="normal">。</mi></mstyle></mrow><annotation encoding="application/x-tex">{\color{red}我们总是在注意错过太多，却不注意自己拥有多少。}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord"><span class="mord cjk_fallback" style="color:red;">我</span><span class="mord cjk_fallback" style="color:red;">们</span><span class="mord cjk_fallback" style="color:red;">总</span><span class="mord cjk_fallback" style="color:red;">是</span><span class="mord cjk_fallback" style="color:red;">在</span><span class="mord cjk_fallback" style="color:red;">注</span><span class="mord cjk_fallback" style="color:red;">意</span><span class="mord cjk_fallback" style="color:red;">错</span><span class="mord cjk_fallback" style="color:red;">过</span><span class="mord cjk_fallback" style="color:red;">太</span><span class="mord cjk_fallback" style="color:red;">多</span><span class="mord cjk_fallback" style="color:red;">，</span><span class="mord cjk_fallback" style="color:red;">却</span><span class="mord cjk_fallback" style="color:red;">不</span><span class="mord cjk_fallback" style="color:red;">注</span><span class="mord cjk_fallback" style="color:red;">意</span><span class="mord cjk_fallback" style="color:red;">自</span><span class="mord cjk_fallback" style="color:red;">己</span><span class="mord cjk_fallback" style="color:red;">拥</span><span class="mord cjk_fallback" style="color:red;">有</span><span class="mord cjk_fallback" style="color:red;">多</span><span class="mord cjk_fallback" style="color:red;">少</span><span class="mord cjk_fallback" style="color:red;">。</span></span></span></span></span></p>
+<!-- more -->]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[图论算法集合]]></title>
         <id>https://gaomaoqi.github.io/post/tu-lun-suan-fa-ji-he/</id>
@@ -1444,65 +1453,6 @@ github：gaomaoqi</p>
 <a href="https://www.luogu.com.cn/user/234930">gaobeifan2022的luogu主页</a><br>
 <a href="https://www.luogu.com.cn/user/313821">continue的luogu主页</a></p>
 <p>注：进入我的博客请都使用谷歌浏览器，并定期按Ctrl+Shift+R去缓存</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[飞机，你感冒了么？]]></title>
-        <id>https://gaomaoqi.github.io/post/fei-ji-ni-gan-mou-liao-me/</id>
-        <link href="https://gaomaoqi.github.io/post/fei-ji-ni-gan-mou-liao-me/">
-        </link>
-        <updated>2020-03-17T14:30:44.000Z</updated>
-        <summary type="html"><![CDATA[<p>人有时会感冒，感冒之后人们一般戴上口罩。这样呼吸的空气是热的，能舒服一些。</p>
-<p>可是，有些飞机也戴着口罩，难道它是感冒了么？</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>人有时会感冒，感冒之后人们一般戴上口罩。这样呼吸的空气是热的，能舒服一些。</p>
-<p>可是，有些飞机也戴着口罩，难道它是感冒了么？</p>
-<!-- more -->
-<figure data-type="image" tabindex="1"><img src="https://s2.ax1x.com/2020/03/04/3oe0De.png" alt="3oe0De.png" loading="lazy"></figure>
-<p>飞机是铁疙瘩，当然没有感冒这回事。飞机戴的“口罩”是雷达罩，确切地说，是雷达的“整流罩”。</p>
-<p>所谓“整流罩”，作用就是“整理气流”。它是个“壳壳”，里头没有东西。</p>
-<p>取掉了整流罩的飞机头，一般是这样的：</p>
-<figure data-type="image" tabindex="2"><img src="https://s2.ax1x.com/2020/03/04/3omgo9.png" alt="3omgo9.png" loading="lazy"></figure>
-<p>图：CRJ-200飞机去掉整流罩之后</p>
-<p>虽然不是什么值钱部件，但雷达的整流罩在飞机的最前端，当飞机以900多公里的时速飞行时，磨损比较大，容易掉漆。如果在空中发生撞鸟等事故，它往往首先遭殃。它一旦变形就会影响气流，就像汽车的前轮亏气会影响方向一样，所以必须处理——更换！</p>
-<p>整流罩在飞机上也算是“易损部件”。好在它的价格不贵，各家公司虽然业务竞争，但遇到来借雷达罩的，一般都会帮忙。除非你是空客我是波音，借给你也没法用……</p>
-<p>因为借来借去，所以你能看到飞机戴着各种奇怪的“口罩”。</p>
-<p>虽然借来借去，但实际上大部分“口罩”都是自家的。自家为什么会有两种颜色的“口罩”呢？</p>
-<p>如果所有的航空公司从来不更换涂装，又从来都只用自家的雷达罩，你是不会有机会看到“飞机戴口罩”的。但如果一个公司有两种涂装，例如像东航这样六七年过去了还没有完成涂装更新，你就经常能看到它家的飞机“戴口罩”。</p>
-<figure data-type="image" tabindex="3"><img src="https://s2.ax1x.com/2020/03/04/3oM0k4.png" alt="3oM0k4.png" loading="lazy"></figure>
-<p>虽然都是自家的，但东航的一种涂装是“三线”，一种涂装是“纯白”。凑到一起时，当然就“戴了口罩”了。</p>
-<figure data-type="image" tabindex="4"><img src="https://s2.ax1x.com/2020/03/04/3oMLB8.png" alt="3oMLB8.png" loading="lazy"></figure>
-<p>这样的例子很多。例如深圳航空的这架波音737-300在当时刚换了新装，但不巧用了一个旧款的雷达罩。</p>
-<figure data-type="image" tabindex="5"><img src="https://s2.ax1x.com/2020/03/04/3o1ZlR.png" alt="3o1ZlR.png" loading="lazy"></figure>
-<p>还有美联航在换了“翻肚皮”涂装之后，依然在使用原来“霸气灰”涂装的雷达罩。</p>
-<figure data-type="image" tabindex="6"><img src="https://s2.ax1x.com/2020/03/04/3o3q2j.png" alt="3o3q2j.png" loading="lazy"></figure>
-<p>以及海南航空剃了胡子之后，却还在使用原来的“小胡子”雷达罩——这很好玩，这可就不是“美髯胡“，而是彻底的“仁丹胡”啦！</p>
-<figure data-type="image" tabindex="7"><img src="https://s2.ax1x.com/2020/03/04/3o8AMR.png" alt="3o8AMR.png" loading="lazy"></figure>
-<p>那它原本的“新口罩”哪儿去了呢？——原来在这里！</p>
-<figure data-type="image" tabindex="8"><img src="https://s2.ax1x.com/2020/03/04/3o83QA.png" alt="3o83QA.png" loading="lazy"></figure>
-<p>因为换装导致“飞机戴口罩”的还有厦门航空。虽然“新装”与“旧装”变化不大，但是一个曲线的更改，就会引发“口罩效应”。</p>
-<figure data-type="image" tabindex="9"><img src="https://s2.ax1x.com/2020/03/04/3oGOH0.png" alt="3oGOH0.png" loading="lazy"></figure>
-<p>当然就算是同样的“口罩”，想要每架飞机的雷达罩都严丝合缝，也非常困难。毕竟，谁家喷涂时，还拿着游标卡尺在那儿量呢！</p>
-<p>机队中有“特殊涂装（包括彩绘）”是导致“飞机戴口罩”的另一主要原因。特别是国航南航这种大公司，机队有大量的“星空联盟”或者“天合联盟”的涂装。一时没有来得及给雷达罩重新喷漆时，就只能戴着颜色不匹配的口罩四处跑。嗬，这叫一个拉风！</p>
-<figure data-type="image" tabindex="10"><img src="https://s2.ax1x.com/2020/03/04/3oJgGF.png" alt="3oJgGF.png" loading="lazy"></figure>
-<p>国航虽然是载旗航空，但却是最不讲面子的。只要挣钱，管它穿啥衣服，戴啥口罩！</p>
-<p>所以就算是远程大家伙，重型机，照样“戴着口罩”满世界跑，好几个月都不换喔！</p>
-<figure data-type="image" tabindex="11"><img src="https://s2.ax1x.com/2020/03/04/3otK0I.png" alt="3otK0I.png" loading="lazy"></figure>
-<p>不仅是国航，就连很注意形象的海航也免不了偶尔客串一下雷达罩。瞧这个红鼻子，如果再配个彩绘，是不是就可以叫做“红鼻子阿义”了。</p>
-<figure data-type="image" tabindex="12"><img src="https://s2.ax1x.com/2020/03/04/3oNoaq.png" alt="3oNoaq.png" loading="lazy"></figure>
-<p>不仅载旗航空，就连廉价航空也免不了俗套。</p>
-<p>只是很让人疑惑，春秋航空都是白衣服，这灰灰的口罩，是哪里借回来的哩？</p>
-<figure data-type="image" tabindex="13"><img src="https://s2.ax1x.com/2020/03/04/3oUiRO.png" alt="3oUiRO.png" loading="lazy"></figure>
-<p>而且，灰口罩还挺多。连日本的乐桃航空也戴灰口罩，难道这是空客作为备件出厂时的颜色？</p>
-<figure data-type="image" tabindex="14"><img src="https://s2.ax1x.com/2020/03/04/3o0D41.png" alt="3o0D41.png" loading="lazy"></figure>
-<p>首都航空虽然属于海航集团，但毕竟顶着“首都”的名号。找国航借个口罩戴戴，看来轻而易举嘛！</p>
-<figure data-type="image" tabindex="15"><img src="http://img6.hangkong.com/147118-99.jpg?0" alt="" loading="lazy"></figure>
-<p>还有属于东航集团的中国货运航空，也去找国航借口罩了~~</p>
-<figure data-type="image" tabindex="16"><img src="https://s2.ax1x.com/2020/03/07/3ORUbQ.png" alt="3ORUbQ.png" loading="lazy"></figure>
-<p>但山东航空这个，很稀罕。无论如何也想不起来，这种口罩应该是谁家的。</p>
-<figure data-type="image" tabindex="17"><img src="https://s2.ax1x.com/2020/03/07/3ORh5R.png" alt="3ORh5R.png" loading="lazy"></figure>
-<p>只有这个口罩不是借的，是自己拿毛笔画的。在2006年德国世界杯期间，汉莎航空把自己的雷达罩都涂成了足球，风趣有加！</p>
-<h2 id="qaq求点赞">QAQ求点赞</h2>
 ]]></content>
     </entry>
 </feed>
