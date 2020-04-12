@@ -1974,7 +1974,9 @@ blockquote {
 .hljs-strong {
   font-weight: bold;
 }
-body {
+.bg-color .bg-color {
+      background: transparent !important;
+    }body {
       background-color: #eee;
     }
     .nav-toggle .line {
@@ -1998,7 +2000,7 @@ body {
       border-bottom-color: #555;
     }
     .archive-timeline-box::after, .tag-timeline-wrapper::after {
-      background: #eeeeeefe;
+      background: #eeeeeed8;
     }h1, h2, h3, h4, h5, h6 {
       color: #555;
     }
@@ -2042,11 +2044,11 @@ body {
       }.nav-item a:hover {
         color: #222;
       }.nav-item-active {
-      background: #f9f9f9fe;
+      background: #f9f9f9d8;
     }
 
     .nav-item:hover {
-      background: #f9f9f9fe;
+      background: #f9f9f9d8;
       color: rgba(0, 0, 0, 0.98);
     }.site-author-image {
       border-radius: 50%;
@@ -2064,25 +2066,25 @@ body {
       color: #fff;
       border-bottom-color: #fff;
     }.active-current > a {
-      color: #fc6423 !important;
-      border-bottom-color: #fc6423 !important;
+      color: #ced4da !important;
+      border-bottom-color: #ced4da !important;
     }
     .sidebar-title-active {
-      color: #fc6423 !important;
-      border-bottom-color: #fc6423 !important;
+      color: #ced4da;
+      border-bottom-color: #ced4da;
     }
     .sidebar-title-item:hover {
-      color: #fc6423 !important;
+      color: #ced4da !important;
     }
     .active-show > a {
-      color: #fc6423;
-      border-bottom-color: #fc6423;
+      color: #ced4da;
+      border-bottom-color: #ced4da;
     }
     .active-hidden > a {
-      color: #fc6423;
-      border-bottom-color: #fc6423;
+      color: #ced4da;
+      border-bottom-color: #ced4da;
     }.bg-color {
-      background-color: #fffffffe;
+      background-color: #ffffffd8;
     }
       .site-meta {
         background: #000 !important;
@@ -2091,13 +2093,15 @@ body {
         background: #000 !important;
       }
     .brand {
-      background: #000000fe;
+      background: #000000d8;
     }
     .main-title {
       color: #FFF;
     }
     .mist .site-title i {
-      background: #FFFFFFfe;
+      background: #FFFFFFd8;
+    }.box-shadow-wrapper {
+      padding: 10px;
     }.box-shadow-wrapper {
       box-shadow: none !important;
     }
