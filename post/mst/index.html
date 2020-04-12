@@ -4,18 +4,18 @@
     <meta charset="UTF-8"/>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="keywords" content="">
+<meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="结庐在信竞，而无大佬喧。">
-<meta name="theme-color" content="">
+<meta name="theme-color" content="#000">
 <title>【图论算法】最小生成树（MST） | GMQ&#39;s blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1586679774259">
+<link rel="shortcut icon" href="/favicon.ico?v=1586679799525">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/pisces.css">
 
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-<link href="/media/hljs/styles/github.css" rel="stylesheet">  
+<link href="/media/hljs/styles/androidstudio.css" rel="stylesheet">  
 
 <script src="/media/hljs/highlight.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
@@ -34,9 +34,9 @@
     <div class="head-top-line"></div>
     <div class="header-box">
       
-<div class=" ">
+<div class=" pisces">
   <header class="header  ">
-    <div class="blog-header box-shadow-wrapper  " id="header">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
       <div class="nav-toggle" id="nav_toggle">
         <div class="toggle-box">
           <div class="line line-top"></div>
@@ -53,11 +53,15 @@
           
         </div>
         
+          <p class="subtitle">精于心，简于形</p>
+        
       </div>
       <nav class="site-nav" id="site_nav">
         <ul id="nav_ul">
           
             
+            
+              
             
             <li class="nav-item ">
               
@@ -70,6 +74,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -80,6 +86,8 @@
             </li>
           
             
+            
+              
             
             <li class="nav-item ">
               
@@ -92,6 +100,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -103,6 +113,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -112,6 +124,16 @@
               
             </li>
           
+          
+            
+              <li class="nav-item ">
+                <a href="/friends" target="_self">
+                  
+                    fa-ship友情链接
+                  
+                </a>
+              </li>
+            
           
         </ul>
       </nav>
@@ -151,7 +173,272 @@
   
     <div class="sidebar-box box-shadow-wrapper bg-color right-motion" id="sidebar">
       
-      <div class="sidebar-body " id="sidebar_body">
+        <div class="post-list-sidebar">
+          <div class="sidebar-title">
+            <span id="tocSideBar" class="sidebar-title-item sidebar-title-active">文章目录</span>
+            <span id="metaSideBar" class="sidebar-title-item">站点概览</span>
+          </div>
+        </div>
+      
+      <div class="sidebar-body pisces" id="sidebar_body">
+        
+          
+            <div class="post-side-meta" id="post_side_meta">
+              
+<div class="sidebar-wrapper box-shadow-wrapper bg-color">
+  <div class="sidebar-item">
+    <img class="site-author-image right-motion" src="/images/avatar.png"/>
+    <p class="site-author-name">GMQ&#39;s blog</p>
+    <p class="site-description right-motion">结庐在信竞，而无大佬喧。</p>
+  </div>
+  <div class="sidebar-item side-item-stat right-motion">
+    <div class="sidebar-item-box">
+      <a href="/archives/">
+        
+        <span class="site-item-stat-count">10</span>
+        <span class="site-item-stat-name">文章</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="">
+        <span class="site-item-stat-count">7</span>
+        <span class="site-item-stat-name">分类</span>
+      </a>
+    </div>
+    <div class="sidebar-item-box">
+      <a href="/tags/">
+        <span class="site-item-stat-count">7</span>
+        <span class="site-item-stat-name">标签</span>
+      </a>
+    </div>
+  </div>
+  
+    
+      <div class="sidebar-item" style="border-top: 1px dotted #ccc; margin-top: 10px;">
+      </div>
+    
+  
+  
+
+
+</div>
+            </div>
+            <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
+              <div class="toc-box right-motion">
+  <div class="toc-wrapper auto-number auto" id="toc_wrapper">
+    <ul class="markdownIt-TOC">
+<li><a href="#%E4%B8%80-%E7%94%9F%E6%88%90%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89">一、生成树的定义</a></li>
+<li><a href="#%E4%BA%8C-%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E7%9A%84%E5%AE%9A%E4%B9%89">二、最小生成树的定义</a></li>
+<li><a href="#%E4%B8%89-%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E7%9A%84%E7%89%B9%E6%80%A7">三、最小生成树的特性</a></li>
+<li><a href="#%E5%9B%9B-%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91%E7%9A%84%E7%AE%97%E6%B3%95">四、最小生成树的算法</a>
+<ul>
+<li><a href="#kruskal%E7%AE%97%E6%B3%95">Kruskal算法</a>
+<ul>
+<li><a href="#%E7%AE%97%E6%B3%95%E6%80%9D%E6%83%B3">算法思想</a></li>
+<li><a href="#%E7%AE%97%E6%B3%95%E6%AD%A5%E9%AA%A4">算法步骤</a></li>
+<li><a href="#%E7%AE%97%E6%B3%95%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81">算法核心代码</a></li>
+<li><a href="#%E8%AF%A5%E7%AE%97%E6%B3%95%E4%BE%8B%E9%A2%98">该算法例题</a>
+<ul>
+<li><a href="#1452-mst%E7%BB%83%E4%B9%A0%E4%BF%AE%E5%A4%8D%E5%85%AC%E8%B7%AF2988">1452 -- 【MST练习】修复公路2988</a></li>
+<li><a href="#1455-mst%E7%BB%83%E4%B9%A0%E8%81%94%E7%BB%9C%E5%91%98">1455 -- 【MST练习】联络员</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#prim%E7%AE%97%E6%B3%95">Prim算法</a>
+<ul>
+<li><a href="#%E7%AE%97%E6%B3%95%E6%AD%A5%E9%AA%A4-2">算法步骤</a></li>
+<li><a href="#%E8%AF%81%E6%98%8E%E8%BF%87%E7%A8%8B"><s>证明过程</s></a></li>
+<li><a href="#%E6%A0%B8%E5%BF%83%E4%BB%A3%E7%A0%81">核心代码</a></li>
+<li><a href="#%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95">优化方法</a></li>
+<li><a href="#%E8%AF%A5%E7%AE%97%E6%B3%95%E4%BE%8B%E9%A2%98-2">该算法例题</a>
+<ul>
+<li><a href="#1450-mst%E7%BB%83%E4%B9%A0%E5%B1%80%E5%9F%9F%E7%BD%911123">1450 -- 【MST练习】局域网1123</a></li>
+<li><a href="#1451-mst%E7%BB%83%E4%B9%A0%E7%B9%81%E5%BF%99%E7%9A%84%E9%83%BD%E5%B8%82scoi20051406">1451 -- 【MST练习】繁忙的都市（SCOI2005）1406</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+
+let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
+let active = 'active-show', activeClass = 'active-current';
+let tocWrapper = document.querySelector('#toc_wrapper');
+let tocContent = tocWrapper.children[0];
+let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+
+function addTocNumber(elem, deep) {
+  if (!elem) {
+    return;
+  }
+  let prop = elem.__proto__;
+
+  if (prop === HTMLUListElement.prototype) {
+    for (let i = 0; i < elem.children.length; i++) {
+      addTocNumber(elem.children[i], deep + (i + 1) + '.');
+    }
+  } else if (prop === HTMLLIElement.prototype) {
+    // 保存li元素
+    if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+      lList.push(elem);
+    }
+    for (let i = 0; i < elem.children.length; i++) {
+      let cur = elem.children[i];
+      if (cur.__proto__ === HTMLAnchorElement.prototype) {
+        if (autoNumber) {
+          cur.text =  deep + ' ' + cur.text;
+        }
+      } else if (cur.__proto__ === HTMLUListElement.prototype) {
+        addTocNumber(cur, deep);
+      }
+    }
+  }
+}
+
+function removeParentActiveClass() {
+  let parents = tocContent.querySelectorAll('.'+active)
+  parents.forEach(function(elem) {
+    elem.classList.remove(active);
+  });
+}
+
+function addActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.add(activeClass);
+  }
+}
+
+function removeActiveClass(index) {
+  if (index >= 0 && index < hList.length) {
+    lList[index].classList.remove(activeClass);
+  }
+}
+
+function addActiveLiElemment(elem, parent) {
+  if (!elem || elem === parent) {
+    return;
+  } else {
+    if (elem.__proto__ === HTMLLIElement.prototype) {
+      elem.classList.add(active);
+    }
+    addActiveLiElemment(elem.parentElement, parent);
+  }
+}
+
+function showToc() {
+  if (tocWrapper) {
+    postBody = document.querySelector('#post_body');
+    for (let i = 0; i < postBody.children.length; i++) {
+      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+        hList.push(postBody.children[i]);
+      }
+    }
+    if (tocWrapper.classList.contains('compress')) {
+        tocContent.classList.add('closed');
+    } else if (tocWrapper.classList.contains('no_compress')){
+      tocContent.classList.add('expanded');
+    } else {
+      if (hList.length > 10) {
+        active = 'active-hidden'
+        tocContent.classList.add('closed');
+      } else {
+        tocContent.classList.add('expanded');
+      }
+    }
+  }
+}
+
+(function() {
+  // 处理不是从#一级标题开始目录
+  if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+    let con = tocContent.children[0].children[0];
+    tocContent.innerHTML = con.innerHTML;
+  }
+  let markdownItTOC = document.querySelector('.markdownIt-TOC');
+  let innerHeight = window.innerHeight;
+  markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+  addTocNumber(tocContent, '');
+})();
+
+document.addEventListener('scroll', function(e) {
+  if (lList.length <= 0) {
+    return;
+  }
+  let scrollTop = document.scrollingElement.scrollTop + 10;
+  let dir;
+
+  if (lastTop - scrollTop > 0) {
+    dir = 'up';
+  } else {
+    dir = 'down';
+  }
+
+  lastTop = scrollTop;
+  if (scrollTop <= 0) {
+    if (lastIndex >= 0 && lastIndex < hList.length) {
+      lList[lastIndex].classList.remove(activeClass);
+    }
+    return;
+  }
+
+  let current = 0, hasFind = false;
+  for (let i = 0; i < hList.length; i++) {
+    if (hList[i].offsetTop > scrollTop) {
+      current = i;
+      hasFind = true;
+      break;
+    }
+  }
+  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+    current = hList.length - 1;
+  } else {
+    current--;
+  }
+  if (dir === 'down') {
+    if (current > lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex) 
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  } else {
+    if (current < lastIndex) {
+      addActiveClass(current);
+      removeActiveClass(lastIndex);
+      lastIndex = current;
+      removeParentActiveClass();
+      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    }
+  }
+});
+
+window.addEventListener('load', function() {
+  showToc();
+  document.querySelector('#sidebar').style='display: block;';
+  tocWrapper.classList.add('toc-active');
+  setTimeout(function() {
+    if ("createEvent" in document) {
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("scroll", false, true);
+      document.dispatchEvent(evt);
+    }
+    else {
+      document.fireEvent("scroll");
+    }
+  }, 500)
+})
+
+</script>
+            </div>
+          
         
       </div>
     </div>
@@ -864,7 +1151,7 @@ int main() {
   </footer>
   
   
-  <div class=" back-to-top" id="back_to_top">
+  <div class="pisces back-to-top" id="back_to_top">
     <i class="fa fa-arrow-up"></i>
     
     <span class="scrollpercent">
@@ -874,9 +1161,6 @@ int main() {
   </div>
   
   
-  
-    
-
   
 </div>
 <script>
@@ -1010,7 +1294,7 @@ int main() {
   }
 
   // 链接跳转
-  let newWindow = ''
+  let newWindow = 'false'
   if (newWindow === 'true') {
     let links = document.querySelectorAll('.post-body a')
     links.forEach(item => {

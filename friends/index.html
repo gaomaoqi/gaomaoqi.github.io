@@ -4,18 +4,18 @@
       <meta charset="UTF-8"/>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="keywords" content="">
+<meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="结庐在信竞，而无大佬喧。">
-<meta name="theme-color" content="">
+<meta name="theme-color" content="#000">
 <title>GMQ&#39;s blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1586679774259">
+<link rel="shortcut icon" href="/favicon.ico?v=1586679799525">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/pisces.css">
 
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-<link href="/media/hljs/styles/github.css" rel="stylesheet">  
+<link href="/media/hljs/styles/androidstudio.css" rel="stylesheet">  
 
 <script src="/media/hljs/highlight.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
@@ -32,9 +32,9 @@
     <div class="head-top-line"></div>
     <div class="header-box">
       
-<div class=" ">
+<div class=" pisces">
   <header class="header  ">
-    <div class="blog-header box-shadow-wrapper  " id="header">
+    <div class="blog-header box-shadow-wrapper bg-color " id="header">
       <div class="nav-toggle" id="nav_toggle">
         <div class="toggle-box">
           <div class="line line-top"></div>
@@ -51,11 +51,15 @@
           
         </div>
         
+          <p class="subtitle">精于心，简于形</p>
+        
       </div>
       <nav class="site-nav" id="site_nav">
         <ul id="nav_ul">
           
             
+            
+              
             
             <li class="nav-item ">
               
@@ -68,6 +72,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -78,6 +84,8 @@
             </li>
           
             
+            
+              
             
             <li class="nav-item ">
               
@@ -90,6 +98,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -101,6 +111,8 @@
           
             
             
+              
+            
             <li class="nav-item ">
               
               
@@ -110,6 +122,16 @@
               
             </li>
           
+          
+            
+              <li class="nav-item nav-item-active">
+                <a href="/friends" target="_self">
+                  
+                    fa-ship友情链接
+                  
+                </a>
+              </li>
+            
           
         </ul>
       </nav>
@@ -141,7 +163,7 @@
     </div>
     <div class="main-continer">
       
-      <div class="section-layout  ">
+      <div class="section-layout pisces ">
         <div class="section-layout-wrapper">
           <div id="sidebarMeta" class="sidebar">
     
@@ -180,14 +202,12 @@
   
   
 
-  
-
 
 </div>
 </div>
 <script>
   let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = '';
+  let scheme = 'pisces';
   let sidebarWrapper = document.querySelector('.sidebar-wrapper');
   if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
     document.addEventListener('scroll', function(e) {
@@ -199,10 +219,12 @@
     });
   }
   </script>
-          <div class="section-box  box-shadow-wrapper">
+          <div class="section-box pisces box-shadow-wrapper">
             <section class="friends-section bg-color slide-down-in">
               <div class="firends-box">
-                <h1 class="firends-title" itemprop="name headline"></h1>
+                <h1 class="firends-title" itemprop="name headline">友情链接</h1>
+                
+                  
                 
               </div>
               <hr>
@@ -264,7 +286,7 @@
   </footer>
   
   
-  <div class=" back-to-top" id="back_to_top">
+  <div class="pisces back-to-top" id="back_to_top">
     <i class="fa fa-arrow-up"></i>
     
     <span class="scrollpercent">
@@ -274,9 +296,6 @@
   </div>
   
   
-  
-    
-
   
 </div>
 <script>
@@ -410,7 +429,7 @@
   }
 
   // 链接跳转
-  let newWindow = ''
+  let newWindow = 'false'
   if (newWindow === 'true') {
     let links = document.querySelectorAll('.post-body a')
     links.forEach(item => {
