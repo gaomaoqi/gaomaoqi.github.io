@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaomaoqi.github.io</id>
     <title>GMQ&apos;s blog</title>
-    <updated>2020-04-12T09:28:46.649Z</updated>
+    <updated>2020-04-12T09:31:21.232Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaomaoqi.github.io"/>
     <link rel="self" href="https://gaomaoqi.github.io/atom.xml"/>
@@ -1402,6 +1402,14 @@ A318，也叫&quot;迷你空客&quot;，是A320家族中最小的成员。在空
 <h1 id="2020317">2020.3.17</h1>
 <ul>
 <li>搭建完成，开始运行。</li>
+</ul>
+<h1 id="2020412">2020.4.12</h1>
+<ul>
+<li>启用新域名 gaomaoqi.xyz <s>腾讯云太坑人了</s></li>
+</ul>
+<h1 id="2020413">2020.4.13</h1>
+<ul>
+<li>主题简化。精于心，简于行。</li>
 </ul>
 ]]></content>
     </entry>
