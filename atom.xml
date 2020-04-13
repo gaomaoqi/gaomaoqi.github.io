@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaomaoqi.github.io</id>
     <title>GMQ&apos;s blog</title>
-    <updated>2020-04-13T08:35:07.694Z</updated>
+    <updated>2020-04-13T10:25:46.285Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaomaoqi.github.io"/>
     <link rel="self" href="https://gaomaoqi.github.io/atom.xml"/>
@@ -10,6 +10,51 @@
     <logo>https://gaomaoqi.github.io/images/avatar.png</logo>
     <icon>https://gaomaoqi.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, GMQ&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[【DP算法】Part0 - DP入门思想]]></title>
+        <id>https://gaomaoqi.github.io/post/dp-suan-fa-part0-dp-ru-men-si-xiang/</id>
+        <link href="https://gaomaoqi.github.io/post/dp-suan-fa-part0-dp-ru-men-si-xiang/">
+        </link>
+        <updated>2020-04-13T10:24:59.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="part0-dp入门思想colorwhitecolorboxwhite看好安全出口准备夺门而出"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>a</mi><mi>r</mi><mi>t</mi><mn>0</mn></mrow><annotation encoding="application/x-tex">Part0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord">0</span></span></span></span> —— DP入门思想$\color{white}\colorbox{white}{看好安全出口，准备夺门而出} $</h1>
+<p>首先，我们来一道极其水沝淼㵘的入门思考题：</p>
+<pre><code>【题目简述】给出你一个地图，地图中每个顶点代表一个城市，两个城市间的连线代表道路，连线上的数值代表道路的长度。现在，想从城市A到达城市D，怎样走路程最短，最短路程的长度是多少？
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://s1.ax1x.com/2020/04/10/GTv0v4.png" alt="你看到这行字的时候，就可以退出了！" loading="lazy"></figure>
+<p>看完题后，我们发现这里共有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span> 条路径：</p>
+<table>
+<thead>
+<tr>
+<th>路径</th>
+<th>A→B1→C1→D</th>
+<th>A→B1→C2→D</th>
+<th>A→B2→C2→D</th>
+<th>A→B2→C3→D</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>长度</td>
+<td>5+3+4=12</td>
+<td>5+2+3=10</td>
+<td>2+7+3=12</td>
+<td>2+4+5=11</td>
+</tr>
+</tbody>
+</table>
+<p>而怎么找最短路径呢？</p>
+<p>【方法1】如果采用枚举算法，分别枚举出4条路径，然后比较每条路经的长度，得出最优解10，路径为A→B1→C2→D。</p>
+<p>【方法2】如果我们采用分层递推的思想来做这个题目，会出现什么结果呢？设F(i)表示从点A到达点i的最短距离，则有：</p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mi>A</mi><mo>)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">F(A)=0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mi>B</mi><mn>1</mn><mo>)</mo><mo>=</mo><mi>m</mi><mi>i</mi><mi>n</mi><mrow><mo fence="true">{</mo><mi>F</mi><mo>(</mo><mi>A</mi><mo>)</mo><mo>+</mo><mn>5</mn><mo fence="true">}</mo></mrow><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">F(B1)=min\left\{F(A)+5\right\}=5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">{</span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">5</span><span class="mclose delimcenter" style="top:0em;">}</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mi>B</mi><mn>2</mn><mo>)</mo><mo>=</mo><mi>m</mi><mi>i</mi><mi>n</mi><mrow><mo fence="true">{</mo><mi>F</mi><mo>(</mo><mi>A</mi><mo>)</mo><mo>+</mo><mn>2</mn><mo fence="true">}</mo></mrow><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">F(B2)=min\left\{F(A)+2\right\}=2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord">2</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">{</span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault">A</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">2</span><span class="mclose delimcenter" style="top:0em;">}</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mi>C</mi><mn>1</mn><mo>)</mo><mo>=</mo><mi>m</mi><mi>i</mi><mi>n</mi><mrow><mo fence="true">{</mo><mi>F</mi><mo>(</mo><mi>B</mi><mn>1</mn><mo>)</mo><mo>+</mo><mn>3</mn><mo fence="true">}</mo></mrow><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">F(C1)=min\left\{F(B1)+3\right\}=8</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">{</span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">3</span><span class="mclose delimcenter" style="top:0em;">}</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">8</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mi>C</mi><mn>2</mn><mo>)</mo><mo>=</mo><mi>m</mi><mi>i</mi><mi>n</mi><mrow><mo fence="true">{</mo><mi>F</mi><mo>(</mo><mi>B</mi><mn>1</mn><mo>)</mo><mo>+</mo><mn>2</mn><mo separator="true">,</mo><mi>F</mi><mo>(</mo><mi>B</mi><mn>2</mn><mo>)</mo><mo>+</mo><mn>7</mn><mo fence="true">}</mo></mrow><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">F(C2)=min\left\{F(B1)+2,F(B2)+7\right\}=7</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord">2</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">{</span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord">2</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">7</span><span class="mclose delimcenter" style="top:0em;">}</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">7</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mi>C</mi><mn>3</mn><mo>)</mo><mo>=</mo><mi>m</mi><mi>i</mi><mi>n</mi><mrow><mo fence="true">{</mo><mi>F</mi><mo>(</mo><mi>B</mi><mn>2</mn><mo>)</mo><mo>+</mo><mn>4</mn><mo fence="true">}</mo></mrow><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">F(C3)=min\left\{F(B2)+4\right\}=6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord">3</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">{</span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord">2</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">4</span><span class="mclose delimcenter" style="top:0em;">}</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">6</span></span></span></span></p>
+<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>F</mi><mo>(</mo><mi>D</mi><mo>)</mo><mo>=</mo><mi>m</mi><mi>i</mi><mi>n</mi><mrow><mo fence="true">{</mo><mi>F</mi><mo>(</mo><mi>C</mi><mn>1</mn><mo>)</mo><mo>+</mo><mn>4</mn><mo separator="true">,</mo><mi>F</mi><mo>(</mo><mi>C</mi><mn>2</mn><mo>)</mo><mo>+</mo><mn>3</mn><mo separator="true">,</mo><mi>F</mi><mo>(</mo><mi>C</mi><mn>3</mn><mo>)</mo><mo>+</mo><mn>5</mn><mo fence="true">}</mo></mrow><mo>=</mo><mn>10</mn></mrow><annotation encoding="application/x-tex">F(D)=min\left\{F(C1)+4,F(C2)+3,F(C3)+5\right\}=10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">{</span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord">2</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">3</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord">3</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">5</span><span class="mclose delimcenter" style="top:0em;">}</span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord">0</span></span></span></span></p>
+<p>所以从A到D的最短距离是10，路径为A→B1→C2→D。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【每日一言】2020.4.12]]></title>
         <id>https://gaomaoqi.github.io/post/mei-ri-yi-yan-2020412/</id>
@@ -1420,39 +1465,6 @@ A318，也叫&quot;迷你空客&quot;，是A320家族中最小的成员。在空
 <ul>
 <li>主题简化。精于心，简于行。</li>
 </ul>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[【关于】 Hello,World!（食用必读）]]></title>
-        <id>https://gaomaoqi.github.io/post/helloworld/</id>
-        <link href="https://gaomaoqi.github.io/post/helloworld/">
-        </link>
-        <updated>2020-03-17T15:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p><strong>在浏览本站前，请先务必阅读此篇文章。</strong></p>
-]]></summary>
-        <content type="html"><![CDATA[<p><strong>在浏览本站前，请先务必阅读此篇文章。</strong></p>
-<!-- more -->
-<p>已经有<img src="https://www.hit-counts.com/counter.php?t=MTQ0NjYyMw==%27%20border=%270%27%20alt=%27logo%20services" alt="" loading="lazy">名大佬踩了当前页面。。。</p>
-<h2 id="关于我和我的博客">关于我和我的博客</h2>
-<h3 id="我是谁">我是谁</h3>
-<p>一名OIer，坐标重庆，喜欢民航。<br>
-e-mail：gao.maoqi.2007@foxmail.com<br>
-luogu：gaomaoqi2022<br>
-github：gaomaoqi</p>
-<h2 id="我的博客">我的博客</h2>
-<p>博客主要涉及信息学题解、信息学学习笔记以及民航等方面。<br>
-不定时更新，有灵感就更新。<br>
-另外，我是C++党，所以你所见到的代码几乎都是C++的，略懂Python，<s>以及精通Scratch</s>。</p>
-<h2 id="大事记"><a href="https://gaomaoqi.github.io/post/da-shi-ji/">大事记</a></h2>
-<p><strong>2020.3.17</strong>，搭建完成，开始运行。<br>
-<strong>2020.3.18</strong>，更新主题。<br>
-<strong>2020.3.19</strong>，评论、搜索功能上线。</p>
-<h2 id="my-friends"><a href="https://gaomaoqi.github.io/post/peng-you-men/">My friends</a></h2>
-<p><a href="https://www.luogu.com.cn/user/233809">yuzhenghao的luogu主页</a><br>
-<a href="https://yuzhenghao.cn/">yuzhenghao's blog</a><br>
-<a href="https://www.luogu.com.cn/user/234930">gaobeifan2022的luogu主页</a><br>
-<a href="https://www.luogu.com.cn/user/313821">continue的luogu主页</a></p>
-<p>注：进入我的博客请都使用谷歌浏览器，并定期按Ctrl+Shift+R去缓存</p>
 ]]></content>
     </entry>
 </feed>
