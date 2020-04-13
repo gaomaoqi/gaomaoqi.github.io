@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaomaoqi.github.io</id>
     <title>GMQ&apos;s blog</title>
-    <updated>2020-04-13T10:28:03.954Z</updated>
+    <updated>2020-04-13T10:33:09.837Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaomaoqi.github.io"/>
     <link rel="self" href="https://gaomaoqi.github.io/atom.xml"/>
@@ -10,6 +10,18 @@
     <logo>https://gaomaoqi.github.io/images/avatar.png</logo>
     <icon>https://gaomaoqi.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, GMQ&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[DP算法集合]]></title>
+        <id>https://gaomaoqi.github.io/post/dp-suan-fa-ji-he/</id>
+        <link href="https://gaomaoqi.github.io/post/dp-suan-fa-ji-he/">
+        </link>
+        <updated>2020-04-13T10:31:30.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="github-blog">GitHub Blog</h1>
+<ul>
+<li><a href="https://gaomaoqi.xyz/post/dp-suan-fa-part0-dp-ru-men-si-xiang/">part_0 入门思想</a></li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[【DP算法】Part0 - DP入门思想]]></title>
         <id>https://gaomaoqi.github.io/post/dp-suan-fa-part0-dp-ru-men-si-xiang/</id>
@@ -1436,39 +1448,6 @@ A318，也叫&quot;迷你空客&quot;，是A320家族中最小的成员。在空
 <h1 id="gaobeifan2022"><a href="https://www.luogu.com.cn/user/234930">gaobeifan2022</a></h1>
 <p>帮我无数次康代码，康完代码只留下一句：<br>
 <img src="https://s1.ax1x.com/2020/03/14/8QDEn0.jpg" alt="别说了，去做题吧" loading="lazy"></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[大事记]]></title>
-        <id>https://gaomaoqi.github.io/post/da-shi-ji/</id>
-        <link href="https://gaomaoqi.github.io/post/da-shi-ji/">
-        </link>
-        <updated>2020-03-19T10:08:49.000Z</updated>
-        <summary type="html"><![CDATA[<p><strong>这个博客创建以来的更新</strong></p>
-]]></summary>
-        <content type="html"><![CDATA[<p><strong>这个博客创建以来的更新</strong></p>
-<!-- more -->
-<h1 id="2020319">2020.3.19</h1>
-<ul>
-<li>评论功能上线</li>
-<li>搜索功能上线</li>
-</ul>
-<h1 id="2020318">2020.3.18</h1>
-<ul>
-<li>更新主题。</li>
-</ul>
-<h1 id="2020317">2020.3.17</h1>
-<ul>
-<li>搭建完成，开始运行。</li>
-</ul>
-<h1 id="2020412">2020.4.12</h1>
-<ul>
-<li>启用新域名 gaomaoqi.xyz <s>腾讯云太坑人了</s></li>
-</ul>
-<h1 id="2020413">2020.4.13</h1>
-<ul>
-<li>主题简化。精于心，简于行。</li>
-</ul>
 ]]></content>
     </entry>
 </feed>
