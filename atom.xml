@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://gaomaoqi.github.io</id>
     <title>GMQ&apos;s blog</title>
-    <updated>2020-04-13T13:18:18.460Z</updated>
+    <updated>2020-04-14T10:35:30.726Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://gaomaoqi.github.io"/>
     <link rel="self" href="https://gaomaoqi.github.io/atom.xml"/>
@@ -16,7 +16,11 @@
         <link href="https://gaomaoqi.github.io/post/csp-j-2019-chu-sai-yu-fu-sai-you-ji/">
         </link>
         <updated>2020-04-13T12:36:46.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="初赛">初赛</h1>
+        <summary type="html"><![CDATA[<p>2019年，第一届CSP-J/Sbi'sa拉开序幕，虽然外界猜测该比赛是CCF为逃避教育部“零收费”的限制而举行的，但还是有许多的OIer参加了这个比赛，我便是其中一员……</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>2019年，第一届CSP-J/Sbi'sa拉开序幕，虽然外界猜测该比赛是CCF为逃避教育部“零收费”的限制而举行的，但还是有许多的OIer参加了这个比赛，我便是其中一员……</p>
+<!-- more -->
+<h1 id="初赛">初赛</h1>
 <h2 id="2020911初赛的一个月前"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2020.9.11</mn></mrow><annotation encoding="application/x-tex">2020.9.11</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">2</span><span class="mord">0</span><span class="mord">.</span><span class="mord">9</span><span class="mord">.</span><span class="mord">1</span><span class="mord">1</span></span></span></span>，初赛的一个月前</h2>
 <p>这是本学期第一堂在机房的普通信息技术课</p>
 <p>踏着上课铃，我们走进了机房，只见极域电子教室在屏幕上闪着光</p>
