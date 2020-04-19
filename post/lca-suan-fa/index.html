@@ -8,7 +8,7 @@
 <meta name="description" content="结庐在信竞，而无大佬喧。">
 <meta name="theme-color" content="#000">
 <title>LCA及其算法总结 | GMQ&#39;s blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1587306712605">
+<link rel="shortcut icon" href="/favicon.ico?v=1587306936658">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -560,7 +560,7 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>377<span class="pc-show">字数</span></span>
+      <span>385<span class="pc-show">字数</span></span>
     </span>
     
       
@@ -576,7 +576,9 @@ window.addEventListener('load', function() {
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <h1 id="目录">目录</h1>
+                <p><strong>GMQ出品，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mi>C</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">LCA</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">L</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">A</span></span></span></span> 算法总结</strong></p>
+<!-- more -->
+<h1 id="目录">目录</h1>
 <ul>
 <li>一、前言</li>
 <li>二、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mi>C</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">LCA</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">L</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">A</span></span></span></span> 问题概述
@@ -593,7 +595,7 @@ window.addEventListener('load', function() {
 </li>
 </ul>
 <h2 id="一-前言">一、前言</h2>
-<p>这是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mi>C</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">LCA</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">L</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">A</span></span></span></span>，可不是 <a href="https://loj.ac/user/8">liu_cheng_ao</a> ，也不是 <a href="%5Bhttps://baike.baidu.com/item/LCA%E6%88%98%E6%96%97%E6%9C%BA/9899390?fr=aladdin%5D(https://baike.baidu.com/item/LCA%E6%88%98%E6%96%97%E6%9C%BA/9899390?fr=aladdin)">印度某不靠谱工程</a> 哟</p>
+<p>这是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mi>C</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">LCA</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">L</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">A</span></span></span></span>，可不是 <a href="https://loj.ac/user/8">liu_cheng_ao</a> ，也不是 <a href="https://baike.baidu.com/item/LCA%E6%88%98%E6%96%97%E6%9C%BA/9899390?fr=aladdin">印度某不靠谱工程</a> 哟</p>
 <h2 id="二-lca-问题概述">二、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mi>C</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">LCA</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">L</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">A</span></span></span></span> 问题概述</h2>
 <h3 id="一什么是-lca-问题">（一）什么是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mi>C</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">LCA</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">L</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">A</span></span></span></span> 问题？</h3>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mi>C</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">LCA</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">L</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">A</span></span></span></span>：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mi>o</mi><mi>w</mi><mi>e</mi><mi>s</mi><mi>t</mi><mi>C</mi><mi>o</mi><mi>m</mi><mi>m</mi><mi>o</mi><mi>n</mi><mi>A</mi><mi>n</mi><mi>c</mi><mi>e</mi><mi>s</mi><mi>t</mi><mi>o</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">Lowest Common Ancestor</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">L</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">e</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">o</span><span class="mord mathdefault">m</span><span class="mord mathdefault">m</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">A</span><span class="mord mathdefault">n</span><span class="mord mathdefault">c</span><span class="mord mathdefault">e</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span></span></span></span>基于有根树最近公共祖先问题。</p>
