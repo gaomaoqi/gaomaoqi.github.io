@@ -8,7 +8,7 @@
 <meta name="description" content="结庐在信竞，而无大佬喧。">
 <meta name="theme-color" content="#000">
 <title>【图论算法】最短路径 | GMQ&#39;s blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1587380478058">
+<link rel="shortcut icon" href="/favicon.ico?v=1587380996995">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -862,27 +862,23 @@ int main() {
 </div>
               
   
-    
-      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<div id="gitalk-container"></div>
-
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+<div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
 <script>
-  var gitalk = new Gitalk({
-    clientID: '20976b3088c4d7383701',
-    clientSecret: '0d99e2c56cc607910ee8d61c01bb3608df7e4d1d',
-    repo: 'GMQ-GitTalk',
-    owner: 'gaomaoqi',
-    admin: ['gaomaoqi'],
-    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
-  gitalk.render('gitalk-container')
+new Valine({
+    el: '#vcomments' ,
+    appId: 'f5b492159abe74e673a3',
+    appKey: 'f861f36bd856ef4ab682304fabf2c99a67222f3d',
+    notify: 'true' === 'false', 
+    avatar:'', 
+    placeholder: '在这里写下你的感受',
+    pageSize: '',
+    lang: 'zh-cn',
+    visitor: 'true' === 'true',
+    highlight: 'true' === 'true',
+    avatarForce: 'true' === 'false',
+});
 </script>
-    
-    
-  
 
             </div>
           </div>
