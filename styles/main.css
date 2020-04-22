@@ -118,7 +118,6 @@ body {
   line-height: 2;
   width: 100%;
   overflow-x: hidden;
-  user-select: none;
 }
 sub,
 sup {
@@ -1735,6 +1734,7 @@ pre > span.copy-code:hover {
   font-size: 85%;
   margin: 0;
   padding: 0.2em 0.4em;
+  color: #A10;
 }
 .next-md-body pre {
   word-wrap: normal;
