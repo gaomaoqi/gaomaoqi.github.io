@@ -2191,15 +2191,15 @@ pre > span.copy-code:hover {
     }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
-      cursor: default;
+      cursor: url('/media/curs/normal.cur'), default;
     }a {
-      cursor: pointer;
+      cursor: url('/media/curs/link.cur'), pointer !important;
     }input, textarea, code {
-      cursor: text;
+      cursor: url('/media/curs/texto.cur'), text !important;
     }code > span.copy-code {
-      cursor: pointer;
+      cursor: url('/media/curs/texto.cur'), text !important;
     }.post img {
-      cursor: zoom-in;
+      cursor: url('/media/curs/vertical.cur'), zoom-in !important;
     }.post img {
-      cursor: zoom-out;
+      cursor: url('/media/curs/zoomout.cur'), zoom-out !important;
     }
