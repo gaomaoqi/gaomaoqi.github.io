@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>https://gaomaoqi.github.io</id>
     <title>GMQ&apos;s blog</title>
-    <updated>2020-05-02T01:50:11.359Z</updated>
+    <updated>2020-05-02T09:31:07.641Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="https://gaomaoqi.github.io"/>
+    <link rel="self" href="https://gaomaoqi.github.io/atom.xml"/>
     <subtitle>结庐在信竞，而无大佬喧。</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>https://gaomaoqi.github.io/images/avatar.png</logo>
+    <icon>https://gaomaoqi.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, GMQ&apos;s blog</rights>
     <entry>
         <title type="html"><![CDATA[LCA及其算法总结]]></title>
-        <id>http://localhost:4000/post/lca-suan-fa/</id>
-        <link href="http://localhost:4000/post/lca-suan-fa/">
+        <id>https://gaomaoqi.github.io/post/lca-suan-fa/</id>
+        <link href="https://gaomaoqi.github.io/post/lca-suan-fa/">
         </link>
         <updated>2020-04-19T12:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p><strong>GMQ出品，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mi>C</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">LCA</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">L</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault">A</span></span></span></span> 算法总结</strong></p>
@@ -59,8 +59,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[CSP-J 2019 初赛与复赛 游记]]></title>
-        <id>http://localhost:4000/post/csp-j-2019-chu-sai-yu-fu-sai-you-ji/</id>
-        <link href="http://localhost:4000/post/csp-j-2019-chu-sai-yu-fu-sai-you-ji/">
+        <id>https://gaomaoqi.github.io/post/csp-j-2019-chu-sai-yu-fu-sai-you-ji/</id>
+        <link href="https://gaomaoqi.github.io/post/csp-j-2019-chu-sai-yu-fu-sai-you-ji/">
         </link>
         <updated>2020-04-13T12:36:46.000Z</updated>
         <summary type="html"><![CDATA[<p>2019年，第一届CSP-J/S比赛拉开序幕，虽然外界猜测该比赛是CCF为逃避教育部“零收费”的限制而举行的，但还是有许多的OIer参加了这个比赛，我便是其中一员……</p>
@@ -93,8 +93,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[DP算法集合]]></title>
-        <id>http://localhost:4000/post/dp-zongjie/</id>
-        <link href="http://localhost:4000/post/dp-zongjie/">
+        <id>https://gaomaoqi.github.io/post/dp-zongjie/</id>
+        <link href="https://gaomaoqi.github.io/post/dp-zongjie/">
         </link>
         <updated>2020-04-13T10:31:30.000Z</updated>
         <content type="html"><![CDATA[<h1 id="github-blog">GitHub Blog</h1>
@@ -105,8 +105,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[【DP算法】Part0 - DP入门思想]]></title>
-        <id>http://localhost:4000/post/dp-suan-fa-part0-dp-ru-men-si-xiang/</id>
-        <link href="http://localhost:4000/post/dp-suan-fa-part0-dp-ru-men-si-xiang/">
+        <id>https://gaomaoqi.github.io/post/dp-suan-fa-part0-dp-ru-men-si-xiang/</id>
+        <link href="https://gaomaoqi.github.io/post/dp-suan-fa-part0-dp-ru-men-si-xiang/">
         </link>
         <updated>2020-04-13T10:24:59.000Z</updated>
         <summary type="html"><![CDATA[<h1 id="part0-dp入门思想"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>P</mi><mi>a</mi><mi>r</mi><mi>t</mi><mn>0</mn></mrow><annotation encoding="application/x-tex">Part0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord">0</span></span></span></span> —— DP入门思想</h1>
@@ -154,8 +154,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[图论算法集合]]></title>
-        <id>http://localhost:4000/post/tu-lun-suan-fa-ji-he/</id>
-        <link href="http://localhost:4000/post/tu-lun-suan-fa-ji-he/">
+        <id>https://gaomaoqi.github.io/post/tu-lun-suan-fa-ji-he/</id>
+        <link href="https://gaomaoqi.github.io/post/tu-lun-suan-fa-ji-he/">
         </link>
         <updated>2020-03-31T10:31:33.000Z</updated>
         <summary type="html"><![CDATA[<p><strong>GMQ出品，图论算法思想，例题及代码详解</strong></p>
@@ -184,8 +184,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[【图论算法】最短路径]]></title>
-        <id>http://localhost:4000/post/tu-lun-suan-fa-zui-duan-lu-jing/</id>
-        <link href="http://localhost:4000/post/tu-lun-suan-fa-zui-duan-lu-jing/">
+        <id>https://gaomaoqi.github.io/post/tu-lun-suan-fa-zui-duan-lu-jing/</id>
+        <link href="https://gaomaoqi.github.io/post/tu-lun-suan-fa-zui-duan-lu-jing/">
         </link>
         <updated>2020-03-31T06:14:03.000Z</updated>
         <content type="html"><![CDATA[<h1 id="一-最短路径的定义">一、最短路径的定义</h1>
@@ -416,8 +416,8 @@ int main() {
     </entry>
     <entry>
         <title type="html"><![CDATA[【图论算法】最小生成树（MST）]]></title>
-        <id>http://localhost:4000/post/mst/</id>
-        <link href="http://localhost:4000/post/mst/">
+        <id>https://gaomaoqi.github.io/post/mst/</id>
+        <link href="https://gaomaoqi.github.io/post/mst/">
         </link>
         <updated>2020-03-30T15:00:23.000Z</updated>
         <summary type="html"><![CDATA[<p><strong>GMQ出品，最小生成树（MST）概念、算法、基础例题及代码详解</strong></p>
@@ -919,8 +919,8 @@ int main() {
     </entry>
     <entry>
         <title type="html"><![CDATA[【图论算法】拓扑排序]]></title>
-        <id>http://localhost:4000/post/tu-lun-suan-fa-tuo-bu-pai-xu/</id>
-        <link href="http://localhost:4000/post/tu-lun-suan-fa-tuo-bu-pai-xu/">
+        <id>https://gaomaoqi.github.io/post/tu-lun-suan-fa-tuo-bu-pai-xu/</id>
+        <link href="https://gaomaoqi.github.io/post/tu-lun-suan-fa-tuo-bu-pai-xu/">
         </link>
         <updated>2020-03-24T03:01:06.000Z</updated>
         <summary type="html"><![CDATA[<p><strong>GMQ出品，拓扑排序的概念、堆优化、基础例题及代码详解</strong></p>
@@ -1217,8 +1217,8 @@ int main() {
     </entry>
     <entry>
         <title type="html"><![CDATA[空客A320]]></title>
-        <id>http://localhost:4000/post/kong-ke-a320/</id>
-        <link href="http://localhost:4000/post/kong-ke-a320/">
+        <id>https://gaomaoqi.github.io/post/kong-ke-a320/</id>
+        <link href="https://gaomaoqi.github.io/post/kong-ke-a320/">
         </link>
         <updated>2020-03-21T02:30:19.000Z</updated>
         <summary type="html"><![CDATA[<h1 id="总体介绍">总体介绍</h1>
@@ -1477,8 +1477,8 @@ A318，也叫&quot;迷你空客&quot;，是A320家族中最小的成员。在空
     </entry>
     <entry>
         <title type="html"><![CDATA[美国也爱社会主义你信吗]]></title>
-        <id>http://localhost:4000/post/mei-guo-ye-ai-she-hui-zhu-yi-ni-xin-ma/</id>
-        <link href="http://localhost:4000/post/mei-guo-ye-ai-she-hui-zhu-yi-ni-xin-ma/">
+        <id>https://gaomaoqi.github.io/post/mei-guo-ye-ai-she-hui-zhu-yi-ni-xin-ma/</id>
+        <link href="https://gaomaoqi.github.io/post/mei-guo-ye-ai-she-hui-zhu-yi-ni-xin-ma/">
         </link>
         <updated>2020-03-20T14:24:24.000Z</updated>
         <summary type="html"><![CDATA[<p><strong>转载自<a href="https://www.luogu.com.cn/blog/continueMrZhang/post-za-tan-mei-guo-ye-ai-she-kuai-zhu-yi-ni-xin-ma">continue的博客：美国也爱社会主义你信吗</a></strong></p>

@@ -175,6 +175,9 @@ blockquote {
   width: 0;
   transition: width 1000ms ease-in-out 0s;
 }
+.post-body {
+  overflow: hidden;
+}
 .post-body img {
   cursor: zoom-in;
 }
@@ -193,6 +196,10 @@ pre > span.copy-code {
 }
 pre > span.copy-code:hover {
   color: #FFF;
+}
+.nav-item .fa {
+  width: 16px;
+  text-align: center;
 }
 .head-top-line {
   height: 3px;
@@ -238,10 +245,8 @@ pre > span.copy-code:hover {
   color: #fc6423;
   border: none;
   font-size: 16px;
-  border-top: 1px dotted #ccc;
-  border-bottom: 1px dotted #ccc;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .site-item-rss a {
   color: #fc6423;
@@ -261,7 +266,7 @@ pre > span.copy-code:hover {
   text-align: center;
   font-size: 0.8125em;
   color: #999;
-  margin: 0 0 25px 0;
+  margin: 0 0 10px 0;
 }
 .sidebar-item-social {
   margin-top: 5px;
@@ -1734,7 +1739,6 @@ pre > span.copy-code:hover {
   font-size: 85%;
   margin: 0;
   padding: 0.2em 0.4em;
-  color: #A10;
 }
 .next-md-body pre {
   word-wrap: normal;
@@ -2183,8 +2187,8 @@ pre > span.copy-code:hover {
     .brand {
       background: #000000d8;
     }
-    .main-title {
-      color: #FFF;
+    .main-title, .brand {
+      color: #FFF !important;
     }
     .mist .site-title i {
       background: #FFFFFFd8;
