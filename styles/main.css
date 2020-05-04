@@ -2195,15 +2195,15 @@ pre > span.copy-code:hover {
     }.box-shadow-wrapper {
       box-shadow: none !important;
     }body {
-      cursor: url('/media/curs/normal.cur'), default;
+      cursor: url('https://cdn.jsdelivr.net/gh/gaomaoqi/gaomaoqi.github.io@master/media/curs/normal.cur'), default;
     }a {
-      cursor: url('/media/curs/link.cur'), pointer !important;
+      cursor: url('https://cdn.jsdelivr.net/gh/gaomaoqi/gaomaoqi.github.io@master/media/curs/link.cur'), pointer !important;
     }input, textarea, code {
-      cursor: url('/media/curs/texto.cur'), text !important;
+      cursor: url('https://cdn.jsdelivr.net/gh/gaomaoqi/gaomaoqi.github.io@master/media/curs/texto.cur'), text !important;
     }code > span.copy-code {
-      cursor: url('/media/curs/texto.cur'), text !important;
+      cursor: url('https://cdn.jsdelivr.net/gh/gaomaoqi/gaomaoqi.github.io@master/media/curs/texto.cur'), text !important;
     }.post img {
-      cursor: url('/media/curs/vertical.cur'), zoom-in !important;
+      cursor: url('https://cdn.jsdelivr.net/gh/gaomaoqi/gaomaoqi.github.io@master/media/curs/vertical.cur'), zoom-in !important;
     }.post img {
-      cursor: url('/media/curs/zoomout.cur'), zoom-out !important;
+      cursor: url('https://cdn.jsdelivr.net/gh/gaomaoqi/gaomaoqi.github.io@master/media/curs/zoomout.cur'), zoom-out !important;
     }
